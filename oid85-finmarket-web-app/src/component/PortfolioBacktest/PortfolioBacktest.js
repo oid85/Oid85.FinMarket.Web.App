@@ -60,9 +60,9 @@ export const PortfolioBacktest = () => {
                         <div className='portfolio-backtest-name-button-container'>
                             <button className='btn btn-outline-dark portfolio-backtest-name-button'
                                 onClick={() => {
-                                    dispatch(fetchPortfolioName('8 ETF'))
+                                    dispatch(fetchPortfolioName('7 ETF'))
                                     dispatch(sagaPortfolioBacktest())
-                                }}><div className='portfolio-backtest-name-button-text'>8 ETF</div></button>
+                                }}><div className='portfolio-backtest-name-button-text'>7 ETF</div></button>
                         </div>       
                         <div className='portfolio-backtest-name-button-container'>
                             <button className='btn btn-outline-dark portfolio-backtest-name-button'
