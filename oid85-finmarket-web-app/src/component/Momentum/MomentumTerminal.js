@@ -61,14 +61,14 @@ export const MomentumTerminal = () => {
                         <div className='momentum-terminal-row-number border-style'>№</div>              
                         <div className='border-style' style={{width: 72}}></div>
                         <div className='momentum-terminal-row-ticker border-style'>Тикер</div>
-                        <div className='momentum-terminal-row-target-position border-style'>Позиция расч.</div>
-                        <div className='momentum-terminal-row-life-position border-style'>Позиция Life</div>
-                        <div className='momentum-terminal-row-sync-position border-style'>Синхр.</div>
+                        <div className='momentum-terminal-row-target-position border-style'>Поз. расч.</div>
+                        <div className='momentum-terminal-row-life-position border-style'>Поз. Life</div>
+                        <div className='momentum-terminal-row-sync-position border-style'>Управл.</div>
                         <div className='momentum-terminal-row-target-stop border-style'>Стоп расч.</div>
                         <div className='momentum-terminal-row-life-stop border-style'>Стоп Life</div>
-                        <div className='momentum-terminal-row-sync-stop border-style'>Синхр.</div>     
-                        <div className='momentum-terminal-row-task-sync-position border-style'>Вып.</div>       
-                        <div className='momentum-terminal-row-task-sync-stop border-style'>Вып.</div>                                         
+                        <div className='momentum-terminal-row-sync-stop border-style'>Управл.</div>     
+                        <div className='momentum-terminal-row-task-sync-position border-style'>Синхр. поз.</div>       
+                        <div className='momentum-terminal-row-task-sync-stop border-style'>Синхр. стоп</div>                                         
                     </div>                    
                     {
                         momentumTerminalData.result.rows.map((row) => (
@@ -78,11 +78,11 @@ export const MomentumTerminal = () => {
                                 <div className='momentum-terminal-row-ticker border-style'>{row.ticker}</div>
                                 <MomentumTerminalTargetPosition position={row.targetPosition}/>
                                 <MomentumTerminalLifePosition position={row.lifePosition}/>
-                                <MomentumTerminalSyncPosition button={row.syncSizeButton}/>
-                                <MomentumTerminalTaskSyncPosition task={row.syncTickerSizeTask}/>
+                                <MomentumTerminalSyncPosition button={row.syncSizeButton}/>                                
                                 <MomentumTerminalTargetStop stop={row.targetStop}/>
                                 <MomentumTerminalLifeStop stop={row.lifeStop}/>
                                 <MomentumTerminalSyncStop button={row.syncStopButton}/>
+                                <MomentumTerminalTaskSyncPosition task={row.syncTickerSizeTask}/>
                                 <MomentumTerminalTaskSyncStop task={row.syncTickerStopTask}/>
                             </div>
                         ))                        

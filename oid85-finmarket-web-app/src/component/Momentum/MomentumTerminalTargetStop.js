@@ -12,7 +12,7 @@ export const MomentumTerminalTargetStop = ({stop}) => {
                 stop.doShow
                 ?
                 <div className='momentum-terminal-row-target-stop border-style' style={{backgroundColor: stop.colorFill}}>
-                    <div className='momentum-container'>{`${formatNumber(stop.size)} шт.`}</div>
+                    <div className='momentum-container'>{`Size ${formatNumber(stop.size)} шт.`}</div>
                 </div>
                 :
                 <div className='momentum-terminal-row-target-stop border-style'></div>

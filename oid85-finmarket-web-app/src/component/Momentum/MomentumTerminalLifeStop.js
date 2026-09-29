@@ -12,7 +12,7 @@ export const MomentumTerminalLifeStop = ({stop}) => {
                 stop.doShow
                 ?
                 <div className='momentum-terminal-row-life-stop border-style' style={{backgroundColor: stop.colorFill}}>
-                    <div className='momentum-container'>{`${formatNumber(stop.size)} шт.`}</div>
+                    <div className='momentum-container'>{`Size ${formatNumber(stop.size)} шт.`}</div>
                 </div>
                 :
                 <div className='momentum-terminal-row-life-stop border-style'></div>

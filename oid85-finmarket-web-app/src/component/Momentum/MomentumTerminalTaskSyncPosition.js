@@ -12,7 +12,7 @@ export const MomentumTerminalTaskSyncPosition = ({task}) => {
                 task.doShow
                 ?
                 <div className='momentum-terminal-row-task-sync-position border-style' style={{backgroundColor: task.colorFill}}>
-                    Вып.
+                    New
                 </div>
                 :
                 <div className='momentum-terminal-row-task-sync-position border-style'></div>

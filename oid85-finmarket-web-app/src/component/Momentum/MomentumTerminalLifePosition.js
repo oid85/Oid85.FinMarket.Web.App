@@ -12,7 +12,7 @@ export const MomentumTerminalLifePosition = ({position}) => {
                 position.doShow
                 ?
                 <div className='momentum-terminal-row-life-position border-style' style={{backgroundColor: position.colorFill}}>
-                    <div className='momentum-container'>{`${formatNumber(position.size)} шт.`}</div>
+                    <div className='momentum-container'>{`Size ${formatNumber(position.size)} шт.`}</div>
                 </div>
                 :
                 <div className='momentum-terminal-row-life-position border-style'></div>

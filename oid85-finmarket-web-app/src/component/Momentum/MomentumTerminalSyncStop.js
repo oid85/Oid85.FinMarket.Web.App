@@ -12,7 +12,7 @@ export const MomentumTerminalSyncStop = ({button}) => {
                 button.doShow
                 ?
                 <div className='momentum-terminal-row-sync-stop border-style' style={{backgroundColor: button.colorFill}}>
-                    Синхр.
+                    Поставить стоп
                 </div>
                 :
                 <div className='momentum-terminal-row-sync-stop border-style'></div>
