@@ -59,7 +59,7 @@ export const MomentumTerminal = () => {
                 <div>
                     <div className='horizontal-container'>
                         <div className='momentum-terminal-row-number border-style'>№</div>              
-                        <div className='border-style' style={{width: 52}}></div>
+                        <div className='border-style' style={{width: 72}}></div>
                         <div className='momentum-terminal-row-ticker border-style'>Тикер</div>
                         <div className='momentum-terminal-row-target-position border-style'>Позиция расч.</div>
                         <div className='momentum-terminal-row-life-position border-style'>Позиция Life</div>
@@ -73,8 +73,8 @@ export const MomentumTerminal = () => {
                     {
                         momentumTerminalData.result.rows.map((row) => (
                             <div className='horizontal-container'>
-                                <div className='momentum-terminal-row-number border-style'></div>                                
-                                <div className='border-style'><Ticker value={row.ticker} width={50} height={50} /></div>
+                                <div className='momentum-terminal-row-number border-style'>{row.number}</div>                                
+                                <div className='border-style'><Ticker value={row.ticker} width={70} height={70} /></div>
                                 <div className='momentum-terminal-row-ticker border-style'>{row.ticker}</div>
                                 <MomentumTerminalTargetPosition position={row.targetPosition}/>
                                 <MomentumTerminalLifePosition position={row.lifePosition}/>
