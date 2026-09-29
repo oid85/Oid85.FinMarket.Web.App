@@ -34,6 +34,7 @@ import eutr from "./img/eutr.png"
 import fees from "./img/fees.png"
 import fesh from "./img/fesh.png"
 import flot from "./img/flot.png"
+import fmmm from "./img/fmmm.png"
 import gazp from "./img/gazp.png"
 import gche from "./img/gche.png"
 import geco from "./img/geco.png"
@@ -203,6 +204,7 @@ export const Ticker = ({value, height, width}) => {
         case 'fees': return <img src={fees} alt="" height={height} width={width}/>
         case 'fesh': return <img src={fesh} alt="" height={height} width={width}/>
         case 'flot': return <img src={flot} alt="" height={height} width={width}/>
+        case 'fmmm': return <img src={fmmm} alt="" height={height} width={width}/>
         case 'gazp': return <img src={gazp} alt="" height={height} width={width}/>
         case 'gche': return <img src={gche} alt="" height={height} width={width}/>
         case 'geco': return <img src={geco} alt="" height={height} width={width}/>
@@ -316,7 +318,7 @@ export const Ticker = ({value, height, width}) => {
         case 'tgkb': return <img src={tgkb} alt="" height={height} width={width}/>
         case 'tgkn': return <img src={tgkn} alt="" height={height} width={width}/>
         case 'tgld': return <img src={tgld} alt="" height={height} width={width}/>
-        case 'tmon': return <img src={tmon} alt="" height={height} width={width}/>
+        case 'tmon': return <img src={tmon} alt="" height={height} width={width}/>        
         case 'tpay': return <img src={tpay} alt="" height={height} width={width}/>
         case 'tofz': return <img src={tofz} alt="" height={height} width={width}/>
         case 'trnd': return <img src={trnd} alt="" height={height} width={width}/>
