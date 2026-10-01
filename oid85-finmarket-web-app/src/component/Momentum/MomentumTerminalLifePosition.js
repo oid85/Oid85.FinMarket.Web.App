@@ -13,6 +13,9 @@ export const MomentumTerminalLifePosition = ({position}) => {
                 ?
                 <div className='momentum-terminal-row-life-position border-style' style={{backgroundColor: position.colorFill}}>
                     <div className='momentum-container'>{`Size ${formatNumber(position.size)} шт.`}</div>
+                    <div className='momentum-container'>{`Cost ${formatNumber(position.cost)} руб.`}</div>
+                    <div className='momentum-container'>{`Price ${formatNumber(position.currentPrice)} руб.`}</div>
+                    <div className='momentum-container'>{`DPnL ${formatNumber(position.dailyPnl)} руб.`}</div>
                 </div>
                 :
                 <div className='momentum-terminal-row-life-position border-style'></div>

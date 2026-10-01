@@ -12,7 +12,7 @@ export const MomentumTerminalSyncPosition = ({button}) => {
                 button.doShow
                 ?
                 <div className='momentum-terminal-row-sync-position border-style' style={{backgroundColor: button.colorFill}}>
-                    Докупить
+                    {button.title}
                 </div>
                 :
                 <div className='momentum-terminal-row-sync-position border-style'></div>
