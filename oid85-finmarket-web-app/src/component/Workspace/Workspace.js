@@ -7,6 +7,7 @@ import { TrendDynamicScreen } from '../Screens/TrendDynamicScreen'
 import { CompareTrendScreen } from '../Screens/CompareTrendScreen'
 import { WeekTrendDeltaScreen } from '../Screens/WeekTrendDeltaScreen'
 import { PortfolioScreen } from '../Screens/PortfolioScreen'
+import { LifePortfolioScreen } from '../Screens/LifePortfolio/LifePortfolioScreen'
 import { BondAnalyseScreen } from '../Screens/BondAnalyseScreen'
 import { ClosePriceDiagramSharesScreen } from '../Screens/ClosePriceDiagramSharesScreen'
 import { ClosePriceDiagramIndexesScreen } from '../Screens/ClosePriceDiagramIndexesScreen'
@@ -36,6 +37,7 @@ export const Workspace = () => {
                     <Tab title='Макро'>Макро</Tab>
                     <Tab title='Аналитика по облигациям'>Облигации</Tab>
                     <Tab title='Портфель акций'>Портфель</Tab>
+                    <Tab title='Портфель Life'>Портфель Life</Tab>
                     <Tab title='Бектест портфеля'>Бэктест</Tab>
                     <Tab title='Алго'>Алго</Tab>
                     <Tab title='Моментум'>Моментум</Tab>
@@ -70,7 +72,10 @@ export const Workspace = () => {
                 </TabPanel> 
                 <TabPanel>
                     <PortfolioScreen />
-                </TabPanel>                            
+                </TabPanel>         
+                <TabPanel>
+                    <LifePortfolioScreen />
+                </TabPanel>                                      
                 <TabPanel>
                     <PortfolioBacktestScreen />
                 </TabPanel>          
