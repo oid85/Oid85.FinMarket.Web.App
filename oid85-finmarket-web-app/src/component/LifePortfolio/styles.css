@@ -53,8 +53,24 @@
     width: 200px;
 }
 
+.life-portfolio-delta-text {
+    width: 150px;
+}
+
 .life-portfolio-recommendation {
     width: 100px;
+}
+
+.life-portfolio-size {
+    width: 100px;
+}
+
+.life-portfolio-life-size {
+    width: 100px;
+}
+
+.life-portfolio-cost {
+    width: 150px;
 }
 
 /*Edit modal*/
