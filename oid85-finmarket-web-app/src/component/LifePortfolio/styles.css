@@ -22,7 +22,7 @@
 
 .life-portfolio-container {     
     padding: 1px; 
-    font-size: 16px; 
+    font-size: 14px; 
 }
 
 .life-portfolio-number {
@@ -37,7 +37,23 @@
     width: 250px;
 }
 
-.life-portfolio-column {
+.life-portfolio-yield {
+    width: 70px;
+}
+
+.life-portfolio-rating {
+    width: 70px;
+}
+
+.life-portfolio-percent {
+    width: 70px;
+}
+
+.life-portfolio-delta-percent-text {
+    width: 200px;
+}
+
+.life-portfolio-recommendation {
     width: 100px;
 }
 
