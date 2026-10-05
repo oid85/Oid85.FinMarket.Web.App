@@ -21,55 +21,67 @@
 }
 
 .life-portfolio-container {     
-    padding: 1px; 
+    padding: 1px;     
     font-size: 14px; 
 }
 
 .life-portfolio-number {
+    padding: 1px;
     width: 30px;
 }
 
 .life-portfolio-ticker {
+    padding: 1px;
     width: 120px;  
 }
 
 .life-portfolio-name {
+    padding: 1px;
     width: 250px;
 }
 
 .life-portfolio-yield {
+    padding: 1px;
     width: 70px;
 }
 
 .life-portfolio-rating {
+    padding: 1px;
     width: 70px;
 }
 
 .life-portfolio-percent {
+    padding: 1px;
     width: 70px;
 }
 
 .life-portfolio-delta-percent-text {
+    padding: 1px;
     width: 200px;
 }
 
 .life-portfolio-delta-text {
+    padding: 1px;
     width: 150px;
 }
 
 .life-portfolio-recommendation {
+    padding: 1px;
     width: 100px;
 }
 
 .life-portfolio-size {
+    padding: 1px;
     width: 100px;
 }
 
 .life-portfolio-life-size {
+    padding: 1px;
     width: 100px;
 }
 
 .life-portfolio-cost {
+    padding: 1px;
     width: 150px;
 }
 
