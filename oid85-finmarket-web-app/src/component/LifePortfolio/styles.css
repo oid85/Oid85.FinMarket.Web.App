@@ -22,7 +22,7 @@
 
 .life-portfolio-container {     
     padding: 1px; 
-    font-size: 18px; 
+    font-size: 16px; 
 }
 
 .life-portfolio-number {
@@ -30,7 +30,7 @@
 }
 
 .life-portfolio-ticker {
-    width: 150px;  
+    width: 120px;  
 }
 
 .life-portfolio-name {
