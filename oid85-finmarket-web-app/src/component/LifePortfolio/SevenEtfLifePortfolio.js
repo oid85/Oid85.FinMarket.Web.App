@@ -40,7 +40,14 @@ export const SevenEtfLifePortfolio = () => {
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
                     <div className='life-portfolio-border-style' style={{width: 24}}></div>
                     <div className='life-portfolio-border-style life-portfolio-ticker'>Тикер</div>
-                    <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>                                        
+                    <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>                    
+                    <div className='life-portfolio-border-style life-portfolio-percent'>Доля (расч.), %</div>
+                    <div className='life-portfolio-border-style life-portfolio-delta-percent-text'>Изм., %</div>                    
+                    <div className='life-portfolio-border-style life-portfolio-recommendation'>Рекоменд.</div>
+                    <div className='life-portfolio-border-style life-portfolio-size'>Кол-во (расч.), шт</div>
+                    <div className='life-portfolio-border-style life-portfolio-life-size'>Кол-во (реал.), шт</div>
+                    <div className='life-portfolio-border-style life-portfolio-delta-text'>Изм., шт</div>
+                    <div className='life-portfolio-border-style life-portfolio-cost'>Стоимость (расч.), руб</div>
                 </div>
                 {
                     portfolioData.result.portfolioPositions.map((portfolioPosition) => (
@@ -48,7 +55,14 @@ export const SevenEtfLifePortfolio = () => {
                             <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.number}</div>
                             <div className='life-portfolio-border-style'><Ticker value={portfolioPosition.ticker} width={22} height={22} /></div>
                             <div className='life-portfolio-border-style life-portfolio-ticker' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.ticker}</div>
-                            <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.name}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.name}</div>                                                          
+                            <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.percent)} %`}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-delta-percent-text' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.deltaPercentText}</div>                              
+                            <div className='life-portfolio-border-style life-portfolio-recommendation' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.recommendation}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-size' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.size)} шт`}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-life-size' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.lifeSize)} шт`}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-delta-text' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.deltaText}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-cost' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.cost)} руб`}</div>  
                         </div>
                     ))
                 }

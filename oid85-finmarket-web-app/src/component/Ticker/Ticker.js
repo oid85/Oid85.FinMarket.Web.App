@@ -35,6 +35,8 @@ import fees from "./img/fees.png"
 import fesh from "./img/fesh.png"
 import flot from "./img/flot.png"
 import fmmm from "./img/fmmm.png"
+import fmsa from "./img/fmsa.png"
+import fmbr from "./img/fmbr.png"
 import gazp from "./img/gazp.png"
 import gche from "./img/gche.png"
 import geco from "./img/geco.png"
@@ -205,6 +207,8 @@ export const Ticker = ({value, height, width}) => {
         case 'fesh': return <img src={fesh} alt="" height={height} width={width}/>
         case 'flot': return <img src={flot} alt="" height={height} width={width}/>
         case 'fmmm': return <img src={fmmm} alt="" height={height} width={width}/>
+        case 'fmsa': return <img src={fmsa} alt="" height={height} width={width}/>
+        case 'fmbr': return <img src={fmbr} alt="" height={height} width={width}/>
         case 'gazp': return <img src={gazp} alt="" height={height} width={width}/>
         case 'gche': return <img src={gche} alt="" height={height} width={width}/>
         case 'geco': return <img src={geco} alt="" height={height} width={width}/>
