@@ -22,7 +22,7 @@
 
 .life-portfolio-container {     
     padding: 1px;     
-    font-size: 14px; 
+    font-size: 18px; 
 }
 
 .life-portfolio-number {
@@ -32,7 +32,7 @@
 
 .life-portfolio-ticker {
     padding: 1px;
-    width: 120px;  
+    width: 150px;  
 }
 
 .life-portfolio-name {
@@ -52,12 +52,12 @@
 
 .life-portfolio-percent {
     padding: 1px;
-    width: 70px;
+    width: 80px;
 }
 
 .life-portfolio-delta-percent-text {
     padding: 1px;
-    width: 200px;
+    width: 250px;
 }
 
 .life-portfolio-delta-text {
