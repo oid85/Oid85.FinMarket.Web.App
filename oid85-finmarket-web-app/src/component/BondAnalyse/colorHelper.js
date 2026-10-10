@@ -8,7 +8,7 @@ export const couponColor = (value) => {
 
 export const yieldColor = (value) => {
     if (!value) { return CONSTANTS.COLOR_WHITE }
-    if (value > 15.5) { return CONSTANTS.COLOR_GREEN }
+    if (value > 14.0) { return CONSTANTS.COLOR_GREEN }
 
     return CONSTANTS.COLOR_YELLOW
 }
