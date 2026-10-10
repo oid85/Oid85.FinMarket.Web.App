@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
-import { Alert } from '../Alert/Alert'
-import { ClosePriceDiagramShares } from '../ClosePriceDiagram/ClosePriceDiagramShares'
-import './styles.css'
+import { Alert } from '../../Alert/Alert'
+import { WeekTrendDelta } from '../../WeekTrendDelta/WeekTrendDelta'
+import '../styles.css'
 
-export const ClosePriceDiagramSharesScreen = () => {
+export const WeekTrendDeltaScreen = () => {
     const alert = useSelector(state => state.app.alert)
 
     return (
@@ -13,7 +13,7 @@ export const ClosePriceDiagramSharesScreen = () => {
             {alert && <Alert text={alert} />}
             <div>
                 <div className='horizontal-container'>
-                    <ClosePriceDiagramShares />
+                    <WeekTrendDelta />
                 </div>
             </div>            
         </React.Fragment>

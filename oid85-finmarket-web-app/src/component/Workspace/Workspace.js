@@ -3,17 +3,12 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
-import { TrendDynamicScreen } from '../Screens/TrendDynamicScreen'
-import { CompareTrendScreen } from '../Screens/CompareTrendScreen'
-import { WeekTrendDeltaScreen } from '../Screens/WeekTrendDeltaScreen'
+import { DynamicScreen } from '../Screens/Dynamic/DynamicScreen'
 import { PortfolioScreen } from '../Screens/PortfolioScreen'
 import { LifePortfolioScreen } from '../Screens/LifePortfolio/LifePortfolioScreen'
 import { BondAnalyseScreen } from '../Screens/BondAnalyseScreen'
-import { ClosePriceDiagramSharesScreen } from '../Screens/ClosePriceDiagramSharesScreen'
-import { ClosePriceDiagramIndexesScreen } from '../Screens/ClosePriceDiagramIndexesScreen'
 import { FundamentalScreen } from '../Screens/FundamentalScreen'
 import { PortfolioBacktestScreen } from '../Screens/PortfolioBacktestScreen'
-import { TrendAggregateScreen } from '../Screens/TrendAggregateScreen'
 import { AlgoScreen } from '../Screens/AlgoScreen'
 import { MomentumScreen } from '../Screens/MomentumScreen'
 import { StatArbitrageScreen } from '../Screens/StatArbitrageScreen'
@@ -27,12 +22,7 @@ export const Workspace = () => {
             {alert && <Alert text={alert} />}
             <Tabs>
                 <TabList>
-                    <Tab title='Динамика по дням'>Дни</Tab>
-                    <Tab title='Динамика по неделям'>Нед.</Tab>
-                    <Tab title='Трендовый агрегат'>Тренд. агр.</Tab>
-                    <Tab title='Графики сравнения динамики акций с индексом полной доходности (MCFTR)'>Срав. с MCFTR</Tab>
-                    <Tab title='Графики акций'>Граф. (акц.)</Tab>
-                    <Tab title='Графики индексов'>Граф. (инд.)</Tab>
+                    <Tab title='Динамика'>Динамика</Tab>
                     <Tab title='Фундаментал'>Фунд.</Tab>                    
                     <Tab title='Макро'>Макро</Tab>
                     <Tab title='Аналитика по облигациям'>Облигации</Tab>
@@ -44,23 +34,8 @@ export const Workspace = () => {
                     <Tab title='Статистический арбитраж'>Стат. арбитраж</Tab>
                 </TabList>
                 <TabPanel>
-                    <TrendDynamicScreen />                    
-                </TabPanel>    
-                <TabPanel>
-                    <WeekTrendDeltaScreen />
-                </TabPanel>
-                <TabPanel>
-                    <TrendAggregateScreen />
-                </TabPanel>                
-                <TabPanel>
-                    <CompareTrendScreen />
-                </TabPanel> 
-                <TabPanel>
-                    <ClosePriceDiagramSharesScreen />
-                </TabPanel>      
-                <TabPanel>
-                    <ClosePriceDiagramIndexesScreen />
-                </TabPanel>                                                          
+                    <DynamicScreen />                    
+                </TabPanel>                                                                          
                 <TabPanel>
                     <FundamentalScreen />
                 </TabPanel>                                                                                                                    
