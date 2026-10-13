@@ -70,7 +70,14 @@ export const PortfolioBacktest = () => {
                                     dispatch(fetchPortfolioName('Bond'))
                                     dispatch(sagaPortfolioBacktest())
                                 }}><div className='portfolio-backtest-name-button-text'>Форвардтест облигаций</div></button>
-                        </div>                                                                                                                                                                                                                                                    
+                        </div>      
+                        <div className='portfolio-backtest-name-button-container'>
+                            <button className='btn btn-outline-dark portfolio-backtest-name-button'
+                                onClick={() => {
+                                    dispatch(fetchPortfolioName('SharesAndBonds'))
+                                    dispatch(sagaPortfolioBacktest())
+                                }}><div className='portfolio-backtest-name-button-text'>Акции и облигации</div></button>
+                        </div>                                                                                                                                                                                                                                                                         
                     </div>                 
                     <div className='portfolio-backtest-container'>
                         <div>
