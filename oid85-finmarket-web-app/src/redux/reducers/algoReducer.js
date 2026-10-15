@@ -17,8 +17,8 @@ const initialState = {
     portfolioBacktestResultListData: {},
     portfolioBacktestResultDiagramData: {},
     portfolioOptimizationData: {},
-    currentPortfolio: { name: 'Trend_Life', description: 'Портфель Trend (Tinkoff Женя)' },
-    currentPortfolioStrategy: { name: '' },
+    currentPortfolio: { name: 'UltimateSmoother', description: 'Портфель UltimateSmoother' },
+    currentPortfolioStrategy: { name: 'UltimateSmoother' },
     currentPortfolioBacktestResult: { ticker: '', strategyParamsHash: '', strategyParams: '' }
 }
 
