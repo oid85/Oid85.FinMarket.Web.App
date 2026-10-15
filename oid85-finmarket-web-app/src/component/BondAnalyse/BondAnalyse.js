@@ -33,7 +33,7 @@ export const BondAnalyse = () => {
                     <div className='bond-analyse-number-header-cell bond-analyse-border-style'>№</div> 
                     <div className='bond-analyse-ticker-header-cell bond-analyse-border-style'>Тикер</div> 
                     <div className='bond-analyse-name-header-cell bond-analyse-border-style'>Наименование</div>
-                    <div className='bond-analyse-rating-header-cell bond-analyse-border-style'>Кр. рейт.</div>
+                    <div className='bond-analyse-rating-header-cell bond-analyse-border-style'>Кред. рейт.</div>
                     <div className='bond-analyse-is-floating-coupon-header-cell bond-analyse-border-style'>Плав.</div>
                     <div className='bond-analyse-nkd-header-cell bond-analyse-border-style'>НКД</div>                    
                     <div className='bond-analyse-price-header-cell bond-analyse-border-style'>Цена</div>
