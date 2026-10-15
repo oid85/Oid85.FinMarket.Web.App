@@ -41,9 +41,36 @@ export const ShareLifePortfolio = () => {
                     <div className='life-portfolio-border-style' style={{width: 30}}></div>
                     <div className='life-portfolio-border-style life-portfolio-ticker'>Тикер</div>
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div> 
-                    <div className='life-portfolio-border-style life-portfolio-yield'>Див. доход., %</div>                   
-                    <div className='life-portfolio-border-style life-portfolio-percent'>Доля (расч.), %</div>
-                    <div className='life-portfolio-border-style life-portfolio-delta-percent-text'>Изм., %</div>                    
+                    <div className='life-portfolio-border-style life-portfolio-yield'>
+                        <div>Див. доход., %</div>
+                        <div className='sort-button-container'>
+                            <button className='btn btn-outline-dark sort-button'
+                                onClick={() => {
+                                    dispatch(fetchOrderField('Yield'))
+                                    dispatch(sagaShareLifePortfolioPositionList())
+                                }}><div className='sort-button-text'>Сорт.</div></button>
+                        </div>
+                    </div>                   
+                    <div className='life-portfolio-border-style life-portfolio-percent'>
+                        <div>Доля (расч.), %</div>
+                        <div className='sort-button-container'>
+                            <button className='btn btn-outline-dark sort-button'
+                                onClick={() => {
+                                    dispatch(fetchOrderField('Percent'))
+                                    dispatch(sagaShareLifePortfolioPositionList())
+                                }}><div className='sort-button-text'>Сорт.</div></button>
+                        </div>
+                    </div>
+                    <div className='life-portfolio-border-style life-portfolio-delta-percent-text'>
+                        <div>Изм., %</div>
+                        <div className='sort-button-container'>
+                            <button className='btn btn-outline-dark sort-button'
+                                onClick={() => {
+                                    dispatch(fetchOrderField('DeltaPercent'))
+                                    dispatch(sagaShareLifePortfolioPositionList())
+                                }}><div className='sort-button-text'>Сорт.</div></button>
+                        </div>                        
+                    </div>                    
                     <div className='life-portfolio-border-style life-portfolio-recommendation'>Рекоменд.</div>
                     <div className='life-portfolio-border-style life-portfolio-size'>Кол-во (расч.), шт</div>
                     <div className='life-portfolio-border-style life-portfolio-life-size'>Кол-во (реал.), шт</div>

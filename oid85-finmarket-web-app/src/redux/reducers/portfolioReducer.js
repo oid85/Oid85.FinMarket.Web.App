@@ -1,5 +1,4 @@
 import {
-    FETCH_PORTFOLIO_POSITION_LIST,
     FETCH_BOND_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_SHARE_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST,
@@ -13,7 +12,6 @@ import {
 } from '../types/portfolioTypes'
 
 const initialState = {
-    portfolioPositionListData: {},
     bondLifePortfolioPositionListData: {},
     shareLifePortfolioPositionListData: {},
     threeEtfLifePortfolioPositionListData: {},
@@ -26,7 +24,6 @@ const initialState = {
 
 export const portfolioReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_PORTFOLIO_POSITION_LIST:                return {...state, portfolioPositionListData: {...action.payload}}
         case FETCH_BOND_LIFE_PORTFOLIO_POSITION_LIST:      return {...state, bondLifePortfolioPositionListData: {...action.payload}}
         case FETCH_SHARE_LIFE_PORTFOLIO_POSITION_LIST:     return {...state, shareLifePortfolioPositionListData: {...action.payload}}
         case FETCH_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST: return {...state, threeEtfLifePortfolioPositionListData: {...action.payload}}

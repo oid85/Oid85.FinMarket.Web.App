@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux'
 import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
 import { DynamicScreen } from '../Screens/Dynamic/DynamicScreen'
-import { PortfolioScreen } from '../Screens/PortfolioScreen'
 import { LifePortfolioScreen } from '../Screens/LifePortfolio/LifePortfolioScreen'
 import { BondAnalyseScreen } from '../Screens/BondAnalyseScreen'
 import { FundamentalScreen } from '../Screens/FundamentalScreen'
@@ -26,7 +25,6 @@ export const Workspace = () => {
                     <Tab title='Фундаментал'>Фунд.</Tab>                    
                     <Tab title='Макро'>Макро</Tab>
                     <Tab title='Аналитика по облигациям'>Облигации</Tab>
-                    <Tab title='Портфель акций'>Портфель</Tab>
                     <Tab title='Портфель Life'>Портфель Life</Tab>
                     <Tab title='Бектест портфеля'>Бэктест</Tab>
                     <Tab title='Алго'>Алго</Tab>
@@ -44,10 +42,7 @@ export const Workspace = () => {
                 </TabPanel>                   
                 <TabPanel>
                     <BondAnalyseScreen />
-                </TabPanel> 
-                <TabPanel>
-                    <PortfolioScreen />
-                </TabPanel>         
+                </TabPanel>        
                 <TabPanel>
                     <LifePortfolioScreen />
                 </TabPanel>                                      

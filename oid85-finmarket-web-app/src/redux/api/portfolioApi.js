@@ -1,9 +1,5 @@
 ﻿import {sendAnalyticPostRequest} from './api'
 
-export const getPortfolioPositionListFromApi = async (orderField) => {
-    return sendAnalyticPostRequest('portfolio/position/list', {orderField})
-}
-
 export const getBondLifePortfolioPositionListFromApi = async (orderField) => {
     return sendAnalyticPostRequest('bond-life-portfolio/position/list', {orderField})
 }
@@ -22,8 +18,4 @@ export const getSevenEtfLifePortfolioPositionListFromApi = async (orderField) =>
 
 export const getPortfolioBacktestFromApi = async (portfolioName) => {
     return sendAnalyticPostRequest('portfolio/backtest', {portfolioName})
-}
-
-export const editPortfolioPositionFromApi = async (ticker, manualCoefficient, lifeSize) => {
-    return sendAnalyticPostRequest('portfolio/position/edit', { ticker, manualCoefficient, lifeSize })
 }
