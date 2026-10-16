@@ -34,7 +34,7 @@ export const AlgoPortfolioMonitor = () => {
             ? <Loader/>
             :
             <div className='algo-container'>
-                <div className='horizontal-container'>
+                <div className='horizontal-container-wrap'>
                 {
                     portfolioListData.result.items.map((portfolioName) => (
                         <div className='algo-portfolio-name-button-container'>

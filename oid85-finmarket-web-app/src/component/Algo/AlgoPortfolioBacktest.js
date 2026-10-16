@@ -50,7 +50,7 @@ export const AlgoPortfolioBacktest = () => {
             ? <Loader/>
             :
             <div className='algo-container'>
-                <div className='horizontal-container'>
+                <div className='horizontal-container-wrap'>
                 {
                     portfolioListData.result.items.map((portfolioName) => (
                         <div className='algo-portfolio-name-button-container'>
@@ -64,7 +64,7 @@ export const AlgoPortfolioBacktest = () => {
                     ))
                 }                                                                                                                                                                                                                                                              
                 </div>                
-                <div className='horizontal-container'>
+                <div className='horizontal-container-wrap'>
                 {
                     portfolioStrategyListData.result.items.map((portfolioStrategyName) => (
                         <div className='algo-strategy-name-button-container'>
