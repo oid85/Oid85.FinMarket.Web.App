@@ -1,0 +1,34 @@
+import React from 'react'
+import { Area, Bar, CartesianGrid, ComposedChart, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import './styles.css'
+
+export const FollowTrendPriceDiagram = ({series}) => {
+    return (
+        <React.Fragment>          
+            <div className='follow-trend-diagram'>
+            <ComposedChart                                    
+                data={series}
+                height={170}
+                width={187}
+            >                 
+                <YAxis hide={true} domain={['auto', 'auto']}/>
+                <Legend />
+                {series.map(s => (
+                    <Area 
+                        type="monotone"
+                        dataKey="value" 
+                        data={s.data} 
+                        name={s.name} 
+                        key={s.name} 
+                        stroke={s.color}
+                        fill={s.colorFill}
+                        strokeWidth={1}
+                        dot={false}
+                        />
+                ))}
+                <Tooltip itemSorter={(item) => { return (item.value) * -1 }}/>
+            </ComposedChart>
+            </div>
+        </React.Fragment>                
+    )
+}
