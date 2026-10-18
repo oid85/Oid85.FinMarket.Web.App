@@ -15,7 +15,7 @@ import './styles.css'
 
 export const FollowTrendMonitor = () => {
     
-    const strategyVersions = ['Classic', 'SevenEtfClassic', 'BreakEvenStop', 'TrailStop', 'UpdateStop']
+    const strategyVersions = ['UltimateSmoother']
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
     const followTrendMonitorData = useSelector(state => state.followTrend.followTrendMonitorData)
