@@ -37,17 +37,17 @@
 
 .life-portfolio-name {
     padding: 1px;
-    width: 250px;
+    width: 270px;
 }
 
 .life-portfolio-yield {
     padding: 1px;
-    width: 70px;
+    width: 100px;
 }
 
 .life-portfolio-rating {
     padding: 1px;
-    width: 70px;
+    width: 50px;
 }
 
 .life-portfolio-percent {
@@ -73,6 +73,11 @@
 .life-portfolio-size {
     padding: 1px;
     width: 100px;
+}
+
+.life-portfolio-price {
+    padding: 1px;
+    width: 150px;
 }
 
 .life-portfolio-life-size {
