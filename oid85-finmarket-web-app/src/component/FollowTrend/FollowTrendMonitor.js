@@ -108,23 +108,7 @@ export const FollowTrendMonitor = () => {
                             <FollowTrendMessage message={message}/>     
                         ))                        
                     }
-                </div>
-                <div>Статистика по сигналам и выбитым стоп-лоссам</div>   
-                <div>
-                    <div className='horizontal-container'>  
-                        <div className='follow-trend-ticker-statistic-number border-style'>№</div>              
-                        <div className='border-style' style={{width: 32}}></div>
-                        <div className='follow-trend-ticker-statistic-ticker border-style'>Тикер</div>
-                        <div className='follow-trend-ticker-statistic-value border-style'>Сигналов, шт.</div>
-                        <div className='follow-trend-ticker-statistic-value border-style'>Выбито СЛ, шт.</div>
-                        <div className='follow-trend-ticker-statistic-value border-style'>Выбито СЛ, %</div>
-                    </div>                    
-                    {
-                        followTrendMonitorData.result.tickerStatistic.map((tickerStatisticItem) => (
-                            <FollowTrendTickerStatistic tickerStatisticItem={tickerStatisticItem}/>     
-                        ))                        
-                    }
-                </div>                                            
+                </div>                                           
             </div>
         }
         <EditFollowTrendPortfolioTotalSumModal />
