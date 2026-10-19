@@ -9,7 +9,6 @@ import { FollowTrendPosition } from './FollowTrendPosition'
 import { FollowTrendLineDiagram } from './FollowTrendLineDiagram'
 import { FollowTrendPriceWithStopDiagram } from './FollowTrendPriceWithStopDiagram'
 import { FollowTrendMessage } from './FollowTrendMessage'
-import { FollowTrendTickerStatistic } from './FollowTrendTickerStatistic'
 import { FollowTrendTotalSum } from './FollowTrendTotalSum'
 import './styles.css'
 
