@@ -118,6 +118,7 @@ import rosn from "./img/rosn.png"
 import rtkm from "./img/rtkm.png"
 import rual from "./img/rual.png"
 import sber from "./img/sber.png"
+import sbcn from "./img/sbcn.png"
 import selg from "./img/selg.png"
 import sfin from "./img/sfin.png"
 import sgzh from "./img/sgzh.png"
@@ -302,6 +303,7 @@ export const Ticker = ({value, height, width}) => {
         case 'rual': return <img src={rual} alt="" height={height} width={width}/>
         case 'sberp':
         case 'sber': return <img src={sber} alt="" height={height} width={width}/>
+        case 'sbcn': return <img src={sbcn} alt="" height={height} width={width}/>
         case 'selg': return <img src={selg} alt="" height={height} width={width}/>
         case 'sfin': return <img src={sfin} alt="" height={height} width={width}/>
         case 'sgzh': return <img src={sgzh} alt="" height={height} width={width}/>
