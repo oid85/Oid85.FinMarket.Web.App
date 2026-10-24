@@ -18,7 +18,7 @@ import { MomentumTerminalTaskSyncStop } from './MomentumTerminalTaskSyncStop'
 
 export const MomentumTerminal = () => {
     
-    const strategyVersions = ['Classic']
+    const strategyVersions = ['LifeClassic']
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
     const momentumTerminalData = useSelector(state => state.momentum.momentumTerminalData)
