@@ -13,7 +13,7 @@ const initialState = {
     momentumTerminalData: {},
     momentumBacktestResultData: {},
     momentumPortfolioTotalSum: 0,
-    momentumVersion: 'Classic',
+    momentumVersion: 'LifeClassic',
     editMomentumPortfolioTotalSumModalIsOpened: false
 }
 
