@@ -7,14 +7,14 @@ import { FollowTrendBacktestDiagram } from './FollowTrendBacktestDiagram'
 import { FollowTrendMetric } from './FollowTrendMetric'
 import { FollowTrendPosition } from './FollowTrendPosition'
 import { FollowTrendLineDiagram } from './FollowTrendLineDiagram'
-import { FollowTrendPriceWithStopDiagram } from './FollowTrendPriceWithStopDiagram'
+import { FollowTrendPriceDiagram } from './FollowTrendPriceDiagram'
 import { FollowTrendMessage } from './FollowTrendMessage'
 import { FollowTrendTotalSum } from './FollowTrendTotalSum'
 import './styles.css'
 
 export const FollowTrendMonitor = () => {
     
-    const strategyVersions = ['UltimateSmoother']
+    const strategyVersions = ['ShareUltimateSmoother']
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
     const followTrendMonitorData = useSelector(state => state.followTrend.followTrendMonitorData)
@@ -70,18 +70,18 @@ export const FollowTrendMonitor = () => {
                     </div>                              
                 </div>
                 <div>Открытые позиции</div>
-                <div className='horizontal-container'>
+                <div className='horizontal-container-wrap'>
                     {
                         followTrendMonitorData.result.currentPositions.map((position) => (
                             <FollowTrendPosition position={position}/>     
                         ))                        
                     }
                 </div>
-                <div>График цены за 15 дней</div>
-                <div className='horizontal-container'>
+                <div>График цены за 30 дней</div>
+                <div className='horizontal-container-wrap'>
                     {
-                        followTrendMonitorData.result.priceWithStopSeries.map((seriesList) => (
-                            <FollowTrendPriceWithStopDiagram series={seriesList}/>
+                        followTrendMonitorData.result.priceWithEntryPriceSeries.map((seriesList) => (
+                            <FollowTrendPriceDiagram series={seriesList}/>
                         ))                        
                     }
                 </div>                
