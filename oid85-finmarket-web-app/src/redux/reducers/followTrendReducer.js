@@ -13,7 +13,7 @@ const initialState = {
     followTrendTerminalData: {},
     followTrendBacktestResultData: {},
     followTrendPortfolioTotalSum: 0,
-    followTrendVersion: 'UltimateSmoother',
+    followTrendVersion: 'ShareUltimateSmoother',
     editFollowTrendPortfolioTotalSumModalIsOpened: false
 }
 
