@@ -14,7 +14,13 @@ import './styles.css'
 
 export const FollowTrendMonitor = () => {
     
-    const strategyVersions = ['ShareUltimateSmoother', 'EtfUltimateSmoother', 'FutureUltimateSmoother']
+    const strategyVersions = [
+        'ShareUltimateSmoother', 
+        'EtfUltimateSmoother', 
+        'FutureUltimateSmoother', 
+        'ShareSupertrend'
+    ]
+
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
     const followTrendMonitorData = useSelector(state => state.followTrend.followTrendMonitorData)
