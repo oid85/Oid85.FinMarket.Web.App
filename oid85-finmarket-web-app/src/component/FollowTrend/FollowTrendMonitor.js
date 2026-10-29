@@ -18,7 +18,9 @@ export const FollowTrendMonitor = () => {
         'ShareUltimateSmoother', 
         'EtfUltimateSmoother', 
         'FutureUltimateSmoother', 
-        'ShareSupertrend'
+        'ShareSupertrend',
+        'EtfSupertrend',
+        'FutureSupertrend'
     ]
 
     const dispatch = useDispatch()
