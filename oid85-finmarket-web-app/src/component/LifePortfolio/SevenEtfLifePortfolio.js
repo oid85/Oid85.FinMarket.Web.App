@@ -38,12 +38,13 @@ export const SevenEtfLifePortfolio = () => {
                 </div>
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
-                    <div className='life-portfolio-border-style' style={{width: 30}}></div>
+                    <div className='life-portfolio-border-style' style={{width: 26}}></div>
                     <div className='life-portfolio-border-style life-portfolio-ticker'>Тикер</div>
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div> 
                     <div className='life-portfolio-border-style life-portfolio-price'>Цена, руб.</div>                   
                     <div className='life-portfolio-border-style life-portfolio-percent'>Доля (расч.), %</div>
-                    <div className='life-portfolio-border-style life-portfolio-delta-percent-text'>Изм., %</div>                    
+                    <div className='life-portfolio-border-style life-portfolio-delta-percent-text'>Изм., %</div>
+                    <div className='life-portfolio-border-style life-portfolio-month-delta'>Мес. изм., %</div>                                     
                     <div className='life-portfolio-border-style life-portfolio-recommendation'>Рекоменд.</div>
                     <div className='life-portfolio-border-style life-portfolio-size'>Кол-во (расч.), шт</div>
                     <div className='life-portfolio-border-style life-portfolio-life-size'>Кол-во (реал.), шт</div>
@@ -54,12 +55,13 @@ export const SevenEtfLifePortfolio = () => {
                     portfolioData.result.portfolioPositions.map((portfolioPosition) => (
                         <div className='horizontal-container'>
                             <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.number}</div>
-                            <div className='life-portfolio-border-style'><Ticker value={portfolioPosition.ticker} width={28} height={28} /></div>
+                            <div className='life-portfolio-border-style'><Ticker value={portfolioPosition.ticker} width={24} height={24} /></div>
                             <div className='life-portfolio-border-style life-portfolio-ticker' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.ticker}</div>
                             <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.name}</div>                                                          
                             <div className='life-portfolio-border-style life-portfolio-price' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.price)} руб`}</div>
                             <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.percent)} %`}</div>  
                             <div className='life-portfolio-border-style life-portfolio-delta-percent-text' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.deltaPercentText}</div>                              
+                            <div className='life-portfolio-border-style life-portfolio-month-delta' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.monthDelta}</div>  
                             <div className='life-portfolio-border-style life-portfolio-recommendation' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.recommendation}</div>  
                             <div className='life-portfolio-border-style life-portfolio-size' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.size)} шт`}</div>  
                             <div className='life-portfolio-border-style life-portfolio-life-size' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.lifeSize)} шт`}</div>  

@@ -38,7 +38,7 @@ export const ThreeEtfLifePortfolio = () => {
                 </div>
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
-                    <div className='life-portfolio-border-style' style={{width: 30}}></div>
+                    <div className='life-portfolio-border-style' style={{width: 26}}></div>
                     <div className='life-portfolio-border-style life-portfolio-ticker'>Тикер</div>
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>
                     <div className='life-portfolio-border-style life-portfolio-price'>Цена, руб.</div>                    
@@ -54,7 +54,7 @@ export const ThreeEtfLifePortfolio = () => {
                     portfolioData.result.portfolioPositions.map((portfolioPosition) => (
                         <div className='horizontal-container'>
                             <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.number}</div>
-                            <div className='life-portfolio-border-style'><Ticker value={portfolioPosition.ticker} width={28} height={28} /></div>
+                            <div className='life-portfolio-border-style'><Ticker value={portfolioPosition.ticker} width={24} height={24} /></div>
                             <div className='life-portfolio-border-style life-portfolio-ticker' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.ticker}</div>
                             <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.name}</div>                                                          
                             <div className='life-portfolio-border-style life-portfolio-price' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.price)} руб`}</div>  

@@ -72,7 +72,8 @@ export const ShareLifePortfolio = () => {
                                     dispatch(sagaShareLifePortfolioPositionList())
                                 }}><div className='sort-button-text'>Сорт.</div></button>
                         </div>                        
-                    </div>                    
+                    </div>    
+                    <div className='life-portfolio-border-style life-portfolio-month-delta'>Мес. изм., %</div>                 
                     <div className='life-portfolio-border-style life-portfolio-recommendation'>Рекоменд.</div>
                     <div className='life-portfolio-border-style life-portfolio-size'>Кол-во (расч.), шт</div>
                     <div className='life-portfolio-border-style life-portfolio-life-size'>Кол-во (реал.), шт</div>
@@ -91,6 +92,7 @@ export const ShareLifePortfolio = () => {
                             <div className='life-portfolio-border-style life-portfolio-yield' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.yield)} %`}</div>                                                        
                             <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.percent)} %`}</div>  
                             <div className='life-portfolio-border-style life-portfolio-delta-percent-text' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.deltaPercentText}</div>                              
+                            <div className='life-portfolio-border-style life-portfolio-month-delta' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.monthDelta}</div>  
                             <div className='life-portfolio-border-style life-portfolio-recommendation' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.recommendation}</div>  
                             <div className='life-portfolio-border-style life-portfolio-size' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.size)} шт`}</div>  
                             <div className='life-portfolio-border-style life-portfolio-life-size' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.lifeSize)} шт`}</div>  
