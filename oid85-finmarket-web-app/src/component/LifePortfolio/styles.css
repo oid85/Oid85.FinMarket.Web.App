@@ -22,7 +22,7 @@
 
 .life-portfolio-container {     
     padding: 1px;     
-    font-size: 18px; 
+    font-size: 14px; 
 }
 
 .life-portfolio-number {
@@ -32,12 +32,17 @@
 
 .life-portfolio-ticker {
     padding: 1px;
-    width: 150px;  
+    width: 110px;  
 }
 
 .life-portfolio-name {
     padding: 1px;
-    width: 300px;
+    width: 240px;
+}
+
+.life-portfolio-sector {
+    padding: 1px;
+    width: 150px;
 }
 
 .life-portfolio-yield {
@@ -57,7 +62,7 @@
 
 .life-portfolio-delta-percent-text {
     padding: 1px;
-    width: 250px;
+    width: 200px;
 }
 
 .life-portfolio-delta-text {
