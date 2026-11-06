@@ -3,6 +3,7 @@ import {
     FETCH_SHARE_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST,
+    FETCH_LIFE_SUPER_PORTFOLIO,
     FETCH_PORTFOLIO_BACKTEST,
     FETCH_PORTFOLIO_NAME,
     FETCH_CURRENT_PORTFOLIO_POSITION,
@@ -16,6 +17,7 @@ const initialState = {
     shareLifePortfolioPositionListData: {},
     threeEtfLifePortfolioPositionListData: {},
     sevenEtfLifePortfolioPositionListData: {},
+    lifeSuperPortfolioData: {},
     portfolioBacktestData: {},
     portfolioName: '',
     currentPortfolioPosition: {},
@@ -28,6 +30,8 @@ export const portfolioReducer = (state = initialState, action) => {
         case FETCH_SHARE_LIFE_PORTFOLIO_POSITION_LIST:     return {...state, shareLifePortfolioPositionListData: {...action.payload}}
         case FETCH_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST: return {...state, threeEtfLifePortfolioPositionListData: {...action.payload}}
         case FETCH_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST: return {...state, sevenEtfLifePortfolioPositionListData: {...action.payload}}
+        case FETCH_LIFE_SUPER_PORTFOLIO:                   return {...state, lifeSuperPortfolioData: {...action.payload}}
+
         case FETCH_PORTFOLIO_BACKTEST:                     return {...state, portfolioBacktestData: {...action.payload}}
         case FETCH_PORTFOLIO_NAME:                         return {...state, portfolioName: action.payload}
         case FETCH_CURRENT_PORTFOLIO_POSITION:             return {...state, currentPortfolioPosition: {...action.payload}}

@@ -3,12 +3,14 @@ import {
     SAGA_SHARE_LIFE_PORTFOLIO_POSITION_LIST,
     SAGA_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST,
     SAGA_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST,
+    SAGA_LIFE_SUPER_PORTFOLIO,
     SAGA_PORTFOLIO_BACKTEST,
 
     FETCH_BOND_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_SHARE_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST,
     FETCH_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST,
+    FETCH_LIFE_SUPER_PORTFOLIO,
     FETCH_PORTFOLIO_BACKTEST,
     FETCH_PORTFOLIO_NAME,
     FETCH_CURRENT_PORTFOLIO_POSITION,
@@ -21,12 +23,14 @@ export const sagaBondLifePortfolioPositionList      = () => { return { type: SAG
 export const sagaShareLifePortfolioPositionList     = () => { return { type: SAGA_SHARE_LIFE_PORTFOLIO_POSITION_LIST }}
 export const sagaThreeEtfLifePortfolioPositionList  = () => { return { type: SAGA_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST }}
 export const sagaSevenEtfLifePortfolioPositionList  = () => { return { type: SAGA_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST }}
+export const sagaLifeSuperPortfolio                 = () => { return { type: SAGA_LIFE_SUPER_PORTFOLIO }}
 export const sagaPortfolioBacktest                  = () => { return { type: SAGA_PORTFOLIO_BACKTEST }}
 
 export const fetchBondLifePortfolioPositionList     = (data) => { return { type: FETCH_BOND_LIFE_PORTFOLIO_POSITION_LIST, payload: data }}
 export const fetchShareLifePortfolioPositionList    = (data) => { return { type: FETCH_SHARE_LIFE_PORTFOLIO_POSITION_LIST, payload: data }}
 export const fetchThreeEtfLifePortfolioPositionList = (data) => { return { type: FETCH_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST, payload: data }}
 export const fetchSevenEtfLifePortfolioPositionList = (data) => { return { type: FETCH_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST, payload: data }}
+export const fetchLifeSuperPortfolio                = (data) => { return { type: FETCH_LIFE_SUPER_PORTFOLIO, payload: data }}
 export const fetchPortfolioBacktest                 = (data) => { return { type: FETCH_PORTFOLIO_BACKTEST, payload: data }}
 export const fetchPortfolioName                     = (data) => { return { type: FETCH_PORTFOLIO_NAME, payload: data }}
 export const fetchCurrentPortfolioPosition          = (data) => { return { type: FETCH_CURRENT_PORTFOLIO_POSITION, payload: data }}

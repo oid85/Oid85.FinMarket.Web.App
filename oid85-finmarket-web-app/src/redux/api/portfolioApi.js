@@ -16,6 +16,10 @@ export const getSevenEtfLifePortfolioPositionListFromApi = async (orderField) =>
     return sendAnalyticPostRequest('seven-etf-life-portfolio/position/list', {orderField})
 }
 
+export const getLifeSuperPortfolioFromApi = async () => {
+    return sendAnalyticPostRequest('life-super-portfolio/get', {})
+}
+
 export const getPortfolioBacktestFromApi = async (portfolioName) => {
     return sendAnalyticPostRequest('portfolio/backtest', {portfolioName})
 }

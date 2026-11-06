@@ -4,6 +4,7 @@ import {
     fetchShareLifePortfolioPositionList,
     fetchThreeEtfLifePortfolioPositionList,
     fetchSevenEtfLifePortfolioPositionList,
+    fetchLifeSuperPortfolio,
     fetchPortfolioBacktest
 } from '../actions/portfolioActions'
 import {
@@ -11,6 +12,7 @@ import {
     SAGA_SHARE_LIFE_PORTFOLIO_POSITION_LIST,
     SAGA_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST,
     SAGA_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST,
+    SAGA_LIFE_SUPER_PORTFOLIO,
     SAGA_PORTFOLIO_BACKTEST
 } from '../types/portfolioTypes'
 import {
@@ -18,6 +20,7 @@ import {
     getShareLifePortfolioPositionListFromApi,
     getThreeEtfLifePortfolioPositionListFromApi,
     getSevenEtfLifePortfolioPositionListFromApi,
+    getLifeSuperPortfolioFromApi,
     getPortfolioBacktestFromApi
 } from '../api/portfolioApi'
 
@@ -30,6 +33,7 @@ export function* sagaWatcherPortfolio() {
     yield takeEvery(SAGA_SHARE_LIFE_PORTFOLIO_POSITION_LIST, sagaWorkerShareLifePortfolioPositionList)
     yield takeEvery(SAGA_THREE_ETF_LIFE_PORTFOLIO_POSITION_LIST, sagaWorkerThreeEtfLifePortfolioPositionList)
     yield takeEvery(SAGA_SEVEN_ETF_LIFE_PORTFOLIO_POSITION_LIST, sagaWorkerSevenEtfLifePortfolioPositionList)
+    yield takeEvery(SAGA_LIFE_SUPER_PORTFOLIO, sagaWorkerLifeSuperPortfolio)
     yield takeEvery(SAGA_PORTFOLIO_BACKTEST, sagaWorkerPortfolioBacktest)
 }
 
@@ -55,6 +59,11 @@ function* sagaWorkerSevenEtfLifePortfolioPositionList() {
     let orderField = yield select(currentOrderField)
     let result = yield call(getSevenEtfLifePortfolioPositionListFromApi, orderField)    
     yield put(fetchSevenEtfLifePortfolioPositionList(result))
+}
+
+function* sagaWorkerLifeSuperPortfolio() {    
+    let result = yield call(getLifeSuperPortfolioFromApi)    
+    yield put(fetchLifeSuperPortfolio(result))
 }
 
 function* sagaWorkerPortfolioBacktest() {

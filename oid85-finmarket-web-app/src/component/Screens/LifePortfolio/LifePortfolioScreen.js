@@ -8,6 +8,7 @@ import { ShareLifePortfolioScreen } from './ShareLifePortfolioScreen'
 import { BondLifePortfolioScreen } from './BondLifePortfolioScreen'
 import { SevenEtfLifePortfolioScreen } from './SevenEtfLifePortfolioScreen'
 import { ThreeEtfLifePortfolioScreen } from './ThreeEtfLifePortfolioScreen'
+import { LifeSuperPortfolioScreen } from './LifeSuperPortfolioScreen'
 
 export const LifePortfolioScreen = () => {
     const alert = useSelector(state => state.app.alert)
@@ -17,11 +18,15 @@ export const LifePortfolioScreen = () => {
             {alert && <Alert text={alert} />}
             <Tabs>
                 <TabList>
+                <Tab title='Суперпортфель'>Суперпортфель</Tab>
                 <Tab title='Облигации'>Облигации</Tab>
                 <Tab title='Акции'>Акции</Tab>                
                 <Tab title='7 ETF'>7 ETF</Tab>
                 <Tab title='3 ETF'>3 ETF</Tab>
                 </TabList>
+                <TabPanel>
+                    <LifeSuperPortfolioScreen />
+                </TabPanel>                   
                 <TabPanel>
                     <BondLifePortfolioScreen />
                 </TabPanel>                 
