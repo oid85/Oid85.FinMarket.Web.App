@@ -3,11 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { 
     sagaLifeSuperPortfolio
 } from '../../redux/actions/portfolioActions'
-import { 
-    fetchOrderField
-} from '../../redux/actions/orderActions'
 import Loader from '../Loader/Loader'
-import {Ticker} from '../Ticker/Ticker'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 import { CONSTANTS } from '../../constants'
@@ -24,8 +20,14 @@ export const LifeSuperPortfolio = () => {
 
     const formatNumber = (num) => {
         return new Intl.NumberFormat('ru-RU').format(num);
-      };     
-    
+    };     
+
+    const textColor = (num) => {
+        if (num < -10) { return CONSTANTS.COLOR_DARKRED }
+        if (num < 0) { return CONSTANTS.COLOR_RED }
+        return CONSTANTS.COLOR_DARKGREEN;
+    };
+
     return (
         <React.Fragment>
         {
