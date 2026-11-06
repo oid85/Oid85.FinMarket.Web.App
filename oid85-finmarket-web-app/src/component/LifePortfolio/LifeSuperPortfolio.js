@@ -22,12 +22,6 @@ export const LifeSuperPortfolio = () => {
         return new Intl.NumberFormat('ru-RU').format(num);
     };     
 
-    const textColor = (num) => {
-        if (num < -10) { return CONSTANTS.COLOR_DARKRED }
-        if (num < 0) { return CONSTANTS.COLOR_RED }
-        return CONSTANTS.COLOR_DARKGREEN;
-    };
-
     return (
         <React.Fragment>
         {
@@ -41,12 +35,26 @@ export const LifeSuperPortfolio = () => {
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>                    
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>
+                    <div className='life-portfolio-border-style life-portfolio-description'>Описание</div>
+                    <div className='life-portfolio-border-style life-portfolio-weight'>Вес</div>
+                    <div className='life-portfolio-border-style life-portfolio-percent'>Доля (расч.), %</div>    
+                    <div className='life-portfolio-border-style life-portfolio-delta-text'>Изм., руб</div>   
+                    <div className='life-portfolio-border-style life-portfolio-recommendation'>Рекоменд.</div>   
+                    <div className='life-portfolio-border-style life-portfolio-cost'>Стоимость (расч.), руб</div>
+                    <div className='life-portfolio-border-style life-portfolio-life-cost'>Стоимость (life), руб</div>                              
                 </div>
                 {
                     portfolioData.result.portfolios.map((portfolio) => (
                         <div className='horizontal-container'>
                             <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: portfolio.colorFill}}>{portfolio.number}</div>
                             <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: portfolio.colorFill}}>{portfolio.name}</div>
+                            <div className='life-portfolio-border-style life-portfolio-description' style={{backgroundColor: portfolio.colorFill}}>{portfolio.description}</div>
+                            <div className='life-portfolio-border-style life-portfolio-weight' style={{backgroundColor: portfolio.colorFill}}>{portfolio.weight}</div>
+                            <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: portfolio.colorFill}}>{`${formatNumber(portfolio.percent)} %`}</div>
+                            <div className='life-portfolio-border-style life-portfolio-delta-text' style={{backgroundColor: portfolio.colorFill}}>{portfolio.deltaPercentText}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-recommendation' style={{backgroundColor: portfolio.colorFill}}>{portfolio.recommendation}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-cost' style={{backgroundColor: portfolio.colorFill}}>{`${formatNumber(portfolio.cost)} руб`}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-life-cost' style={{backgroundColor: portfolio.colorFill}}>{`${formatNumber(portfolio.lifeCost)} руб`}</div>                              
                         </div>
                     ))
                 }

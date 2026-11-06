@@ -40,6 +40,16 @@
     width: 240px;
 }
 
+.life-portfolio-description {
+    padding: 1px;
+    width: 240px;
+}
+
+.life-portfolio-weight {
+    padding: 1px;
+    width: 100px;  
+}
+
 .life-portfolio-sector {
     padding: 1px;
     width: 150px;
@@ -96,6 +106,11 @@
 }
 
 .life-portfolio-cost {
+    padding: 1px;
+    width: 150px;
+}
+
+.life-portfolio-life-cost {
     padding: 1px;
     width: 150px;
 }
