@@ -5,7 +5,6 @@ import 'react-tabs/style/react-tabs.css'
 import { Alert } from '../Alert/Alert'
 import { DynamicScreen } from '../Screens/Dynamic/DynamicScreen'
 import { LifePortfolioScreen } from '../Screens/LifePortfolio/LifePortfolioScreen'
-import { BondAnalyseScreen } from '../Screens/BondAnalyseScreen'
 import { FundamentalScreen } from '../Screens/FundamentalScreen'
 import { PortfolioBacktestScreen } from '../Screens/PortfolioBacktestScreen'
 import { AlgoScreen } from '../Screens/AlgoScreen'
@@ -25,7 +24,6 @@ export const Workspace = () => {
                     <Tab title='Динамика'>Динамика</Tab>
                     <Tab title='Фундаментал'>Фунд.</Tab>                    
                     <Tab title='Макро'>Макро</Tab>
-                    <Tab title='Аналитика по облигациям'>Облигации</Tab>
                     <Tab title='Портфель Life'>Портфель Life</Tab>
                     <Tab title='Бектест портфеля'>Бэктест</Tab>
                     <Tab title='Алго'>Алго</Tab>
@@ -41,10 +39,7 @@ export const Workspace = () => {
                 </TabPanel>                                                                                                                    
                 <TabPanel>
                     <MacroScreen />
-                </TabPanel>                   
-                <TabPanel>
-                    <BondAnalyseScreen />
-                </TabPanel>        
+                </TabPanel>                    
                 <TabPanel>
                     <LifePortfolioScreen />
                 </TabPanel>                                      

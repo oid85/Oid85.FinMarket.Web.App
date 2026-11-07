@@ -15,7 +15,7 @@ import './styles.css'
 
 export const MomentumMonitor = () => {
     
-    const strategyVersions = ['LifeClassic']
+    const strategyVersions = ['LifeClassic', 'SevenEtfClassic']
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
     const momentumMonitorData = useSelector(state => state.momentum.momentumMonitorData)
