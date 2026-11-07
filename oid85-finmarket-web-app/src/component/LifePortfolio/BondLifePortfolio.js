@@ -41,16 +41,6 @@ export const BondLifePortfolio = () => {
                     <div className='life-portfolio-border-style life-portfolio-ticker'>Тикер</div>
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>
                     <div className='life-portfolio-border-style life-portfolio-price'>Цена, руб.</div>
-                    <div className='life-portfolio-border-style life-portfolio-yield'>
-                        <div>Куп. доход., %</div>
-                        <div className='sort-button-container'>
-                            <button className='btn btn-outline-dark sort-button'
-                                onClick={() => {
-                                    dispatch(fetchOrderField('Yield'))
-                                    dispatch(sagaBondLifePortfolioPositionList())
-                                }}><div className='sort-button-text'>Сорт.</div></button>
-                        </div>
-                    </div> 
                     <div className='life-portfolio-border-style life-portfolio-rating'>Рейт.</div>
                     <div className='life-portfolio-border-style life-portfolio-percent'>
                         <div>Доля (расч.), %</div>
@@ -84,8 +74,7 @@ export const BondLifePortfolio = () => {
                             <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.number}</div>                            
                             <div className='life-portfolio-border-style life-portfolio-ticker' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.ticker}</div>
                             <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.name}</div>  
-                            <div className='life-portfolio-border-style life-portfolio-price' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.price)} руб`}</div>
-                            <div className='life-portfolio-border-style life-portfolio-yield' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.yield)} %`}</div>  
+                            <div className='life-portfolio-border-style life-portfolio-price' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.price)} руб`}</div>                            
                             <div className='life-portfolio-border-style life-portfolio-rating' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.rating}</div>  
                             <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: portfolioPosition.colorFill}}>{`${formatNumber(portfolioPosition.percent)} %`}</div>  
                             <div className='life-portfolio-border-style life-portfolio-delta-percent-text' style={{backgroundColor: portfolioPosition.colorFill}}>{portfolioPosition.deltaPercentText}</div>                              
