@@ -18,10 +18,18 @@ export const FollowTrendMonitor = () => {
         'ShareUltimateSmoother', 
         'EtfUltimateSmoother', 
         'FutureUltimateSmoother', 
-        'EtfWeekUltimateSmoother', 
+
         'ShareSupertrend',
         'EtfSupertrend',
-        'FutureSupertrend'
+        'FutureSupertrend',
+
+        'ShareWeekUltimateSmoother', 
+        'EtfWeekUltimateSmoother', 
+        'FutureWeekUltimateSmoother', 
+                
+        'ShareWeekSupertrend',
+        'EtfWeekSupertrend',
+        'FutureWeekSupertrend'
     ]
 
     const dispatch = useDispatch()
@@ -86,7 +94,7 @@ export const FollowTrendMonitor = () => {
                         ))                        
                     }
                 </div>
-                <div>График цены за 30 дней</div>
+                <div>График цены за 30 периодов</div>
                 <div className='horizontal-container-wrap'>
                     {
                         followTrendMonitorData.result.priceWithEntryPriceSeries.map((seriesList) => (
