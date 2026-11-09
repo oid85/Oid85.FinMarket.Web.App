@@ -116,7 +116,27 @@ export const FollowTrendMonitor = () => {
                     <div className='follow-trend-container'>
                         <FollowTrendBacktestDiagram series={followTrendMonitorData.result.shortBacktestSeries}/>
                     </div>               
-                </div>                
+                </div> 
+                <div>История позиций</div> 
+                <div>
+                    {
+                        followTrendMonitorData.result.positionWeightData.map((dataItem) => (
+                            <div className='horizontal-container'>                   
+                                <div className='follow-trend-weigth-data-ticker follow-trend-weigth-data-cell-border-style'>{dataItem.ticker}</div>
+                                <div className='horizontal-container'>
+                                {
+                                    dataItem.positionWeightItems.map((weightItem) => (
+                                        <div 
+                                            title={`${weightItem.date} ${dataItem.ticker} ${weightItem.weight}`}
+                                            className='follow-trend-weigth-data-cell follow-trend-weigth-data-cell-border-style' 
+                                            style={{backgroundColor: weightItem.colorFill}}></div>
+                                    ))
+                                }                      
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>                              
                 <div>Сообщения</div>
                 <div>
                     {

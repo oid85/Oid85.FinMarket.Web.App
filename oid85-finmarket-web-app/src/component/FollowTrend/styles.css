@@ -162,6 +162,20 @@
     padding: 1px; 
 }
 
+.follow-trend-weigth-data-ticker {        
+    font-size: 14px;
+    width: 70px;
+}
+
+.follow-trend-weigth-data-cell {        
+    font-size: 14px;
+    width: 61px;
+}
+
+.follow-trend-weigth-data-cell-border-style {
+    border: 1px solid #808080;     
+}
+
 .follow-trend-version-button-container {    
     padding: 1px;
 }
