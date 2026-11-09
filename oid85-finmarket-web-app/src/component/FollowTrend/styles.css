@@ -173,7 +173,8 @@
 }
 
 .follow-trend-weigth-data-cell-border-style {
-    border: 1px solid #808080;     
+    border: 1px solid #000;     
+    margin: .5px;   
 }
 
 .follow-trend-version-button-container {    
