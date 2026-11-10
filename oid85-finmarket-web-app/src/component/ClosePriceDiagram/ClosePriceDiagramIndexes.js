@@ -31,7 +31,6 @@ export const ClosePriceDiagramIndexes = () => {
                             key={index}
                             ticker={diagram.ticker}
                             name={diagram.name} 
-                            inPortfolio={diagram.inPortfolio} 
                             data={diagram.data} 
                             trendState={diagram.trendState}
                             width={630}

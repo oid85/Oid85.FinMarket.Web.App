@@ -8,7 +8,7 @@ export const MomentumPriceWithStopDiagram = ({series}) => {
             <div className='momentum-diagram'>
             <ComposedChart                                    
                 data={series}
-                height={170}
+                height={100}
                 width={187}
             >        
                 <XAxis hide={true} dataKey="date" type="category" allowDuplicatedCategory={false} />         

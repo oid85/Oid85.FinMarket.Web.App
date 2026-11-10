@@ -41,13 +41,13 @@ export const FundamentalByCompany = () => {
                                 onClick={() => {
                                     dispatch(fetchCurrentInstrument({ticker: instrument.ticker}))
                                     dispatch(sagaFundamentalByCompany())
-                                }}><div className='company-button-text'>{instrument.inPortfolio ? <div><b>{instrument.ticker}</b></div> : <div>{instrument.ticker}</div>}</div></button>
+                                }}><div className='company-button-text'>{instrument.ticker}</div></button>
                         </div>))                    
                 }                
                 </div>
                 <div>
                     <div>
-                        <div className='fundamental-by-company-ticker'>{fundamentalByCompanyData.result.inPortfolio ? <div><b>{`${fundamentalByCompanyData.result.ticker} (в портфеле)`}</b></div> : <div>{fundamentalByCompanyData.result.ticker}</div>}</div>
+                        <div className='fundamental-by-company-ticker'>{fundamentalByCompanyData.result.ticker}</div>
                         <div className='fundamental-by-company-name'>{fundamentalByCompanyData.result.name}</div>
                         <div className='fundamental-by-company-sector'>{fundamentalByCompanyData.result.sector}</div>
                     </div>

@@ -50,18 +50,18 @@ export const BondAnalyse = () => {
                 {
                     bondAnalyseData.result.items.map((item, index) => (
                         <div className='horizontal-container'>
-                            <div className='bond-analyse-number-cell bond-analyse-border-style'>{item.inPortfolio ? <div><b>{item.number}</b></div> : <div>{item.number}</div>}</div> 
-                            <div className='bond-analyse-ticker-cell bond-analyse-border-style'>{item.inPortfolio ? <div><b>{item.ticker}</b></div> : <div>{item.ticker}</div>}</div> 
-                            <div className='bond-analyse-name-cell bond-analyse-border-style'>{item.inPortfolio ? <div><b>{item.name}</b></div> : <div>{item.name}</div>}</div>
-                            <div className='bond-analyse-rating-cell bond-analyse-border-style'>{item.inPortfolio ? <div><b>{item.rating}</b></div> : <div>{item.rating}</div>}</div>
-                            <div className='bond-analyse-is-floating-coupon-cell bond-analyse-border-style'>{item.inPortfolio ? <div><b>{item.isFloatingCoupon}</b></div> : <div>{item.isFloatingCoupon}</div>}</div>
-                            <div className='bond-analyse-nkd-cell bond-analyse-border-style'>{item.inPortfolio ? <div><b>{item.nkd}</b></div> : <div>{item.nkd}</div>}</div>                            
-                            <div className='bond-analyse-price-cell bond-analyse-border-style' style={{backgroundColor: priceColor(item.price)}}>{item.inPortfolio ? <div><b>{item.price}</b></div> : <div>{item.price}</div>}</div>
-                            <div className='bond-analyse-yield-cell bond-analyse-border-style' style={{backgroundColor: yieldColor(item.yield)}}>{item.inPortfolio ? <div><b>{`${item.yield} %`}</b></div> : <div>{`${item.yield} %`}</div>}</div>                            
-                            <div className='bond-analyse-days-to-maturity-cell bond-analyse-border-style' style={{backgroundColor: daysToMaturityColor(item.daysToMaturity)}}>{item.inPortfolio ? <div><b>{`${(item.daysToMaturity / 365.0).toFixed(1)} г.`}</b></div> : <div>{`${(item.daysToMaturity / 365.0).toFixed(1)} г.`}</div>}</div> 
+                            <div className='bond-analyse-number-cell bond-analyse-border-style'>{item.number}</div> 
+                            <div className='bond-analyse-ticker-cell bond-analyse-border-style'>{item.ticker}</div> 
+                            <div className='bond-analyse-name-cell bond-analyse-border-style'>{item.name}</div>
+                            <div className='bond-analyse-rating-cell bond-analyse-border-style'>{item.rating}</div>
+                            <div className='bond-analyse-is-floating-coupon-cell bond-analyse-border-style'>{item.isFloatingCoupon}</div>
+                            <div className='bond-analyse-nkd-cell bond-analyse-border-style'>{item.nkd}</div>                            
+                            <div className='bond-analyse-price-cell bond-analyse-border-style' style={{backgroundColor: priceColor(item.price)}}>{item.price}</div>
+                            <div className='bond-analyse-yield-cell bond-analyse-border-style' style={{backgroundColor: yieldColor(item.yield)}}>{`${item.yield} %`}</div>                            
+                            <div className='bond-analyse-days-to-maturity-cell bond-analyse-border-style' style={{backgroundColor: daysToMaturityColor(item.daysToMaturity)}}>{`${(item.daysToMaturity / 365.0).toFixed(1)} г.`}</div> 
                             {
                                 item.coupons.map((coupon, index) => (
-                                    <div className='bond-analyse-coupon-cell bond-analyse-border-style' style={{backgroundColor: couponColor(coupon.couponSum)}}>{item.inPortfolio ? <div><b>{coupon.couponSum}</b></div> : <div>{coupon.couponSum}</div>}</div>                             
+                                    <div className='bond-analyse-coupon-cell bond-analyse-border-style' style={{backgroundColor: couponColor(coupon.couponSum)}}>{coupon.couponSum}</div>                             
                                 ))
                             }                                                       
                         </div>                         

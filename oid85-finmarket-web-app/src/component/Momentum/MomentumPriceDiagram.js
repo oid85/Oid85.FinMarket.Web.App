@@ -8,7 +8,7 @@ export const MomentumPriceDiagram = ({series}) => {
             <div className='momentum-diagram'>
             <ComposedChart                                    
                 data={series}
-                height={170}
+                height={100}
                 width={187}
             >                 
                 <YAxis hide={true} domain={['auto', 'auto']}/>

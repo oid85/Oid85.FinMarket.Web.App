@@ -21,11 +21,11 @@ export const fillColor = (value) => {
     return CONSTANTS.COLOR_STATEBLUE
 }
 
-export const ClosePriceDiagramComponent = ({ key, ticker, name, inPortfolio, data, trendState, width, height, dividendYield }) => {
+export const ClosePriceDiagramComponent = ({ key, ticker, name, data, trendState, width, height, dividendYield }) => {
     return (
         <div className='close-price-diagram-border-style'>
-                <div className='close-price-diagram-ticker'>{inPortfolio ? <div><b>{ticker}</b></div> : <div>{ticker}</div>}</div>
-                <div className='close-price-diagram-name'>{inPortfolio ? <div><b>{name}</b></div> : <div>{name}</div>}</div>                
+                <div className='close-price-diagram-ticker'>{ticker}</div>
+                <div className='close-price-diagram-name'>{name}</div>                
             <ComposedChart key = {key} width={width} height={height} data={data}>
                 <YAxis width={30} type="number" domain={['auto', 'auto']} fontSize={10} />
                 <Tooltip />
