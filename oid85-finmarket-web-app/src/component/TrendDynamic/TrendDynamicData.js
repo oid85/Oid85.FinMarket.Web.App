@@ -4,10 +4,10 @@ import {Ticker} from '../Ticker/Ticker'
 import './styles.css'
 import {CONSTANTS} from '../../constants'
 
-const GetColorTrend = (trend, delta, inPortfolio) => {
+const GetColorTrend = (trend) => {
     if (!trend) { return CONSTANTS.COLOR_WHITE }
-    if (trend == 1) { return inPortfolio ? CONSTANTS.COLOR_GREEN : CONSTANTS.COLOR_LIGHTGREEN }
-    return inPortfolio ? CONSTANTS.COLOR_RED : CONSTANTS.COLOR_LIGHTRED
+    if (trend == 1) { return CONSTANTS.COLOR_LIGHTGREEN }
+    return CONSTANTS.COLOR_LIGHTRED
 }
 
 const GetValueDelta = (delta) => {
@@ -24,16 +24,16 @@ export const TrendDynamicData = ({data}) => {
                     <div className='horizontal-container'>
                         <div className='trend-dynamic-border-style'><Ticker value={dataItem.ticker} width={34} height={34} /></div>
                         <div title={`${dataItem.name}`} className='vertical-container trend-dynamic-border-style'>
-                            <div className='instrument-ticker-cell'>{dataItem.inPortfolio ? <div><b>{dataItem.ticker}</b></div> : <div>{dataItem.ticker}</div>}</div>                            
-                            <div className='instrument-name-cell'>{dataItem.inPortfolio ? <div><b>{dataItem.name}</b></div> : <div>{dataItem.name}</div>}</div>                            
+                            <div className='instrument-ticker-cell'>{dataItem.ticker}</div>                            
+                            <div className='instrument-name-cell'>{dataItem.name}</div>                            
                         </div>                  
                         <div className='vertical-container'>
                             <div className='horizontal-container'>
                             {
                                 dataItem.items.map((item) => (                                                
-                                    <div className='trend-dynamic-border-style' style={{backgroundColor: GetColorTrend(item.trend, item.delta, dataItem.inPortfolio)}}>
-                                        <div className='trend-cell'>{dataItem.inPortfolio ? <div><b>{item.price}</b></div> : <div>{item.price}</div>}</div>
-                                        <div className='delta-cell'>{dataItem.inPortfolio ? <div><b>{GetValueDelta(item.delta)}</b></div> : <div>{GetValueDelta(item.delta)}</div>}</div>
+                                    <div className='trend-dynamic-border-style' style={{backgroundColor: GetColorTrend(item.trend, item.delta)}}>
+                                        <div className='trend-cell'>{item.price}</div>
+                                        <div className='delta-cell'>{GetValueDelta(item.delta)}</div>
                                     </div>
                                 ))
                             }     

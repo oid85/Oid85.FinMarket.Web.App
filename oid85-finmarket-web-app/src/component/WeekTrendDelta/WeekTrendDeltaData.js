@@ -4,10 +4,10 @@ import {Ticker} from '../Ticker/Ticker'
 import './styles.css'
 import {CONSTANTS} from '../../constants'
 
-const GetColorDelta = (delta, inPortfolio) => {
+const GetColorDelta = (delta) => {
     if (!delta) { return CONSTANTS.COLOR_WHITE }
-    if (delta > 0) { return inPortfolio ? CONSTANTS.COLOR_GREEN : CONSTANTS.COLOR_LIGHTGREEN }
-    if (delta <= 0) { return inPortfolio ? CONSTANTS.COLOR_RED : CONSTANTS.COLOR_LIGHTRED }
+    if (delta > 0) { return CONSTANTS.COLOR_LIGHTGREEN }
+    if (delta <= 0) { return CONSTANTS.COLOR_LIGHTRED }
     
     return CONSTANTS.COLOR_WHITE
 }
@@ -31,15 +31,15 @@ export const WeekTrendDeltaData = ({data}) => {
                     <div className='horizontal-container'>
                         <div className='trend-dynamic-border-style'><Ticker value={dataItem.ticker} width={34} height={34} /></div>
                         <div className='vertical-container week-trend-border-style'>
-                            <div className='week-trend-delta-instrument-ticker-cell'>{dataItem.inPortfolio ? <div><b>{dataItem.ticker}</b></div> : <div>{dataItem.ticker}</div>}</div>
-                            <div className='week-trend-delta-instrument-name-cell'>{dataItem.inPortfolio ? <div><b>{dataItem.name}</b></div> : <div>{dataItem.name}</div>}</div>
+                            <div className='week-trend-delta-instrument-ticker-cell'>{dataItem.ticker}</div>
+                            <div className='week-trend-delta-instrument-name-cell'>{dataItem.name}</div>
                         </div>
                         <div className='horizontal-container'>
                             {
                                 dataItem.items.map((item) => (                                                
-                                    <div className='week-trend-delta-value-cell week-trend-border-style' style={{backgroundColor: GetColorDelta(item.delta, dataItem.inPortfolio)}}>
-                                        <div className='week-trend-delta-price-cell'>{dataItem.inPortfolio ? <div><b>{GetPriceValue(item.price)}</b></div> : <div>{GetPriceValue(item.price)}</div>}</div>
-                                        <div className='week-trend-delta-delta-cell'>{dataItem.inPortfolio ? <div><b>{GetDeltaValue(item.delta)}</b></div> : <div>{GetDeltaValue(item.delta)}</div>}</div>
+                                    <div className='week-trend-delta-value-cell week-trend-border-style' style={{backgroundColor: GetColorDelta(item.delta)}}>
+                                        <div className='week-trend-delta-price-cell'>{GetPriceValue(item.price)}</div>
+                                        <div className='week-trend-delta-delta-cell'>{GetDeltaValue(item.delta)}</div>
                                     </div>
                                 ))
                             }

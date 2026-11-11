@@ -9,7 +9,3 @@ export const getInstrumentListFromApi = async () => {
 export const getSectorListFromApi = async () => {
     return sendAnalyticPostRequest(`${controller}/sectors/list`, {})
 }
-
-export const portfolioInstrumentFromApi = async (ticker) => {
-    return sendAnalyticPostRequest(`${controller}/portfolio`, {ticker})
-}

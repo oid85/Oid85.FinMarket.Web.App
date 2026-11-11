@@ -83,60 +83,60 @@ export const FundamentalParameterList = () => {
                             <div className='horizontal-container'>
                                 <div title={fundamentalParameter.concept} className='fundamental-parameter-border-style emitent-cell'>
                                     <div className='horizontal-container'>
-                                        <div className='number-cell'>{fundamentalParameter.inPortfolio ? <div><b>{`${fundamentalParameter.number}.`}</b></div> : <div>{`${fundamentalParameter.number}.`}</div>}</div>
-                                        <div className='ticker-cell'>{fundamentalParameter.inPortfolio ? <div><b>{fundamentalParameter.ticker}</b></div> : <div>{fundamentalParameter.ticker}</div>}</div>
+                                        <div className='number-cell'>{`${fundamentalParameter.number}.`}</div>
+                                        <div className='ticker-cell'>{fundamentalParameter.ticker}</div>
                                     </div>
-                                    <div className='name-cell'>{fundamentalParameter.inPortfolio ? <div><b>{fundamentalParameter.name}</b></div> : <div>{fundamentalParameter.name}</div>}</div>
-                                    <div className='name-sector'>{fundamentalParameter.inPortfolio ? <div><b>{fundamentalParameter.sector}</b></div> : <div>{fundamentalParameter.sector}</div>}</div>
-                                    <div className='moex-cell-text'>{fundamentalParameter.inPortfolio ? <div><b>Доля в IMOEX</b></div> : <div>Доля в IMOEX</div>}</div>
+                                    <div className='name-cell'>{fundamentalParameter.name}</div>
+                                    <div className='name-sector'>{fundamentalParameter.sector}</div>
+                                    <div className='moex-cell-text'>Доля в IMOEX</div>
                                     <div 
                                         className='moex-cell-value fundamental-parameter-border-style'
                                         onDoubleClick={() => {
                                             dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Moex', period: '', value: fundamentalParameter.moex }))
                                             dispatch(showEditFundamentalParameterModal())
                                         }}                                        
-                                        >{fundamentalParameter.inPortfolio ? <div><b>{fundamentalParameter.moex}</b></div> : <div>{fundamentalParameter.moex}</div>}</div>
-                                    <div className='mfso-cell-text'>{fundamentalParameter.inPortfolio ? <div><b>Отчет</b></div> : <div>Отчет</div>}</div>
+                                        >{fundamentalParameter.moex}</div>
+                                    <div className='mfso-cell-text'>Отчет</div>
                                     <div 
                                         className='mfso-cell-value fundamental-parameter-border-style'
                                         onDoubleClick={() => {
                                             dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Report', period: '', value: fundamentalParameter.report }))
                                             dispatch(showEditFundamentalParameterModal())
                                         }}                                        
-                                        >{fundamentalParameter.inPortfolio ? <div><b>{fundamentalParameter.report}</b></div> : <div>{fundamentalParameter.report}</div>}</div>                                    
+                                        >{fundamentalParameter.report}</div>                                    
                                 </div>                             
                                 <div>
                                     <div className='horizontal-container'>
-                                        <div title={fundamentalParameter.score.score.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.score.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>{`${fundamentalParameter.score.score.value}`}</b></div> : <div>{`${fundamentalParameter.score.score.value}`}</div>}</div>                                                                        
+                                        <div title={fundamentalParameter.score.score.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.score.colorFill}}>{`${fundamentalParameter.score.score.value}`}</div>                                                                        
                                     </div>
                                     <div className='horizontal-container'>
-                                        <div title={fundamentalParameter.score.pe.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.pe.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>PE</b></div> : <div>PE</div>}</div>                                                                                
-                                        <div title={fundamentalParameter.score.pbv.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.pbv.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>BV</b></div> : <div>BV</div>}</div>
+                                        <div title={fundamentalParameter.score.pe.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.pe.colorFill}}>PE</div>                                                                                
+                                        <div title={fundamentalParameter.score.pbv.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.pbv.colorFill}}>BV</div>
                                     </div>
                                     <div className='horizontal-container'>
-                                        <div title={fundamentalParameter.score.evEbitda.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.evEbitda.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>EV</b></div> : <div>EV</div>}</div>                                        
-                                        <div title={fundamentalParameter.score.netDebtEbitda.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.netDebtEbitda.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>ND</b></div> : <div>ND</div>}</div>                                                                                
+                                        <div title={fundamentalParameter.score.evEbitda.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.evEbitda.colorFill}}>EV</div>                                        
+                                        <div title={fundamentalParameter.score.netDebtEbitda.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.netDebtEbitda.colorFill}}>ND</div>                                                                                
                                     </div>
                                     <div className='horizontal-container'>
-                                        <div title={fundamentalParameter.score.netProfit.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.netProfit.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>NP</b></div> : <div>NP</div>}</div>                                                                                
+                                        <div title={fundamentalParameter.score.netProfit.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.netProfit.colorFill}}>NP</div>                                                                                
                                     </div> 
                                     <div className='horizontal-container'>
-                                        <div title={fundamentalParameter.score.fcf.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.fcf.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>FCF</b></div> : <div>FCF</div>}</div>                                        
-                                        <div title={fundamentalParameter.score.eps.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.eps.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>EPS</b></div> : <div>EPS</div>}</div>                                                                                
+                                        <div title={fundamentalParameter.score.fcf.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.fcf.colorFill}}>FCF</div>                                        
+                                        <div title={fundamentalParameter.score.eps.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.eps.colorFill}}>EPS</div>                                                                                
                                     </div>                                                                       
                                     <div className='horizontal-container'>
-                                        <div title={fundamentalParameter.score.dividendAristocrat.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.dividendAristocrat.colorFill}}>{fundamentalParameter.inPortfolio ? <div><b>DA</b></div> : <div>DA</div>}</div>
+                                        <div title={fundamentalParameter.score.dividendAristocrat.description} className='fundamental-parameter-border-style score-cell' style={{backgroundColor: fundamentalParameter.score.dividendAristocrat.colorFill}}>DA</div>
                                     </div>                                    
                                 </div>
                                 <div>
-                                    <div className='fundamental-parameter-border-style mcftr-change-cell' style={{backgroundColor: benchmarkChangeColor(fundamentalParameter.benchmarkChange)}}>{fundamentalParameter.inPortfolio ? <div><b>{`${fundamentalParameter.benchmarkChange} %`}</b></div> : <div>{`${fundamentalParameter.benchmarkChange} %`}</div>}</div>
+                                    <div className='fundamental-parameter-border-style mcftr-change-cell' style={{backgroundColor: benchmarkChangeColor(fundamentalParameter.benchmarkChange)}}>{`${fundamentalParameter.benchmarkChange} %`}</div>
                                 </div>                                                                                   
                                 <div>
                                     {
                                         fundamentalParameter.periods.map((item) => (
                                             <div className='fundamental-parameter-border-style year-cell'
                                             style={{backgroundColor: '#fff'}}
-                                            >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                            >{item}</div>
                                         ))                                        
                                     }
                                 </div>   
@@ -149,7 +149,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'NumberShares', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))                                        
                                     }
                                 </div>                                                              
@@ -162,7 +162,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Pe', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -175,7 +175,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Pbv', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -188,7 +188,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Roa', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -201,7 +201,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Roe', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -210,7 +210,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.evEbitda.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style ev-ebitda-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>                                                                
@@ -219,7 +219,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.netDebtEbitda.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style netdebt-ebitda-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -228,7 +228,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.debtRatio.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style debt-ratio-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>     
@@ -237,7 +237,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.debtEquity.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style debt-equity-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>                                                            
@@ -246,7 +246,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.ebitdaRevenue.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style ebitda-revenue-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -255,7 +255,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.ownCapitalNumberShares.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style own-cap-num-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>                                
@@ -268,7 +268,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'MarketCap', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))
                                     }
                                 </div>    
@@ -281,7 +281,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Ev', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))
                                     }
                                 </div>
@@ -294,7 +294,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Ebitda', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))
                                     }
                                 </div>
@@ -307,7 +307,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'OwnCapital', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))
                                     }
                                 </div>   
@@ -320,7 +320,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Assets', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -333,7 +333,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Liabilities', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))                                        
                                     }
                                 </div>                                                                                             
@@ -346,7 +346,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'NetDebt', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -359,7 +359,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Revenue', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -372,7 +372,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'NetProfit', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -385,7 +385,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Eps', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -398,7 +398,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Fcf', period: fundamentalParameter.periods[index], value: item.value }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -411,7 +411,7 @@ export const FundamentalParameterList = () => {
                                                     dispatch(fetchCurrentFundamentalParameter({ ticker: fundamentalParameter.ticker, type: 'Dividend', period: fundamentalParameter.periods[index], value: item }))
                                                     dispatch(showEditFundamentalParameterModal())
                                                 }}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))
                                     }
                                 </div>
@@ -420,7 +420,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.dividendYield.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style dividend-yield-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -429,7 +429,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.price.map((item, index) => (
                                             <div className='fundamental-parameter-border-style price-cell' 
                                                 style={{backgroundColor: '#fff'}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item}</b></div> : <div>{item}</div>}</div>
+                                                >{item}</div>
                                         ))                                        
                                     }
                                 </div>
@@ -438,7 +438,7 @@ export const FundamentalParameterList = () => {
                                         fundamentalParameter.deltaMinMax.map((item, index) => (
                                             <div title={item.description} className='fundamental-parameter-border-style delta-min-max-cell' 
                                                 style={{backgroundColor: item.colorFill}}
-                                                >{fundamentalParameter.inPortfolio ? <div><b>{item.value}</b></div> : <div>{item.value}</div>}</div>
+                                                >{item.value}</div>
                                         ))                                        
                                     }
                                 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                
