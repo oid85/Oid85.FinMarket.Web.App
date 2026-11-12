@@ -24,6 +24,11 @@ export const FollowTrendPosition = ({position}) => {
                 </div>
                 {
                     position.ticker != 'MON'
+                    ? <div className='follow-trend-container'>{`Lot ${formatNumber(position.lot)} шт.`}</div>
+                    : <div></div>
+                }                
+                {
+                    position.ticker != 'MON'
                     ? <div className='follow-trend-container'>{`Size ${formatNumber(position.size)} шт.`}</div>
                     : <div></div>
                 }
