@@ -168,6 +168,13 @@ import ydex from "./img/ydex.png"
 import zaym from "./img/zaym.png"
 import zillp from "./img/zillp.png"
 
+import cnyrubf from "./img/cnyrubf.png"
+import gldrubf from "./img/gldrubf.png"
+import sberf from "./img/sberf.png"
+import usdrubf from "./img/usdrubf.png"
+import gazpf from "./img/gazpf.png"
+import imoexf from "./img/imoexf.png"
+
 export const Ticker = ({value, height, width}) => {
     
     switch(value.toLowerCase()){
@@ -355,6 +362,13 @@ export const Ticker = ({value, height, width}) => {
         case 'ydex': return <img src={ydex} alt="" height={height} width={width}/>
         case 'zaym': return <img src={zaym} alt="" height={height} width={width}/>
         case 'zillp': return <img src={zillp} alt="" height={height} width={width}/>
+
+        case 'cnyrubf': return <img src={cnyrubf} alt="" height={height} width={width}/>
+        case 'gldrubf': return <img src={gldrubf} alt="" height={height} width={width}/>
+        case 'sberf': return <img src={sberf} alt="" height={height} width={width}/>
+        case 'usdrubf': return <img src={usdrubf} alt="" height={height} width={width}/>
+        case 'gazpf': return <img src={gazpf} alt="" height={height} width={width}/>
+        case 'imoexf': return <img src={imoexf} alt="" height={height} width={width}/>
 
         default:
             return <div style={{width: width}}></div>
