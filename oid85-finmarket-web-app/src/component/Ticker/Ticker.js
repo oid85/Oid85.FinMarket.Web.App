@@ -17,6 +17,7 @@ import blng from "./img/blng.png"
 import bspb from "./img/bspb.png"
 import carm from "./img/carm.png"
 import cbom from "./img/cbom.png"
+import chkz from "./img/chkz.png"
 import chmf from "./img/chmf.png"
 import chmk from "./img/chmk.png"
 import cnru from "./img/cnru.png"
@@ -141,6 +142,8 @@ import tpay from "./img/tpay.png"
 import tofz from "./img/tofz.png"
 import trnd from "./img/trnd.png"
 import tmos from "./img/tmos.png"
+import tlcb from "./img/tlcb.png"
+import tcny from "./img/tcny.png"
 import tdiv from "./img/tdiv.png"
 import trur from "./img/trur.png"
 import titr from "./img/titr.png"
@@ -196,6 +199,7 @@ export const Ticker = ({value, height, width}) => {
         case 'bspb': return <img src={bspb} alt="" height={height} width={width}/>
         case 'carm': return <img src={carm} alt="" height={height} width={width}/>
         case 'cbom': return <img src={cbom} alt="" height={height} width={width}/>
+		case 'chkz': return <img src={chkz} alt="" height={height} width={width}/>
         case 'chmf': return <img src={chmf} alt="" height={height} width={width}/>
         case 'chmk': return <img src={chmk} alt="" height={height} width={width}/>
         case 'cnru': return <img src={cnru} alt="" height={height} width={width}/>
@@ -332,6 +336,8 @@ export const Ticker = ({value, height, width}) => {
         case 'tgkn': return <img src={tgkn} alt="" height={height} width={width}/>
         case 'tgld': return <img src={tgld} alt="" height={height} width={width}/>
         case 'tmon': return <img src={tmon} alt="" height={height} width={width}/>        
+		case 'tlcb': return <img src={tlcb} alt="" height={height} width={width}/>        
+		case 'tcny': return <img src={tcny} alt="" height={height} width={width}/>        
         case 'tpay': return <img src={tpay} alt="" height={height} width={width}/>
         case 'tofz': return <img src={tofz} alt="" height={height} width={width}/>
         case 'trnd': return <img src={trnd} alt="" height={height} width={width}/>
