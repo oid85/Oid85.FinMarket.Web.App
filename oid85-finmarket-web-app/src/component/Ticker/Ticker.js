@@ -178,6 +178,8 @@ import usdrubf from "./img/usdrubf.png"
 import gazpf from "./img/gazpf.png"
 import imoexf from "./img/imoexf.png"
 
+import gold from "./img/gold.png"
+
 export const Ticker = ({value, height, width}) => {
     
     switch(value.toLowerCase()){
@@ -375,6 +377,8 @@ export const Ticker = ({value, height, width}) => {
         case 'usdrubf': return <img src={usdrubf} alt="" height={height} width={width}/>
         case 'gazpf': return <img src={gazpf} alt="" height={height} width={width}/>
         case 'imoexf': return <img src={imoexf} alt="" height={height} width={width}/>
+
+        case 'gold': return <img src={gold} alt="" height={height} width={width}/>
 
         default:
             return <div style={{width: width}}></div>
