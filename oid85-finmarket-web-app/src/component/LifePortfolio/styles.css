@@ -120,6 +120,32 @@
     width: 150px;
 }
 
+.life-portfolio-metric {     
+    padding: 1px; 
+    width: 115px;
+}
+
+.life-portfolio-metric-description {     
+    font-size: 14px; 
+}
+
+.life-portfolio-metric-value {     
+    font-size: 28px; 
+}
+
+.life-portfolio-total-sum-container {     
+    padding: 1px; 
+    width: 250px;
+}
+
+.life-portfolio-total-sum-description {     
+    font-size: 14px; 
+}
+
+.life-portfolio-total-sum-value {     
+    font-size: 28px; 
+}
+
 /*Edit modal*/
 .edit-modal-save-button {
     width: 100px;

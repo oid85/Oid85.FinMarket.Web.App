@@ -7,6 +7,8 @@ import Loader from '../Loader/Loader'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 import { CONSTANTS } from '../../constants'
+import { LifePortfolioTotalSum } from './LifePortfolioTotalSum'
+import { LifePortfolioYieldMetric } from './LifePortfolioYieldMetric'
 
 export const LifeSuperPortfolio = () => {
     
@@ -29,9 +31,14 @@ export const LifeSuperPortfolio = () => {
             ? <Loader/>
             :
             <div className='life-portfolio-container'>
-                <div className='horizontal-container'>
-                    <div className='life-portfolio-total-sum'>{`Сумма портфеля: ${formatNumber(portfolioData.result.totalSum)} руб.`}</div>
+                <div>Статистика по доходности</div>
+                <div>
+                    <div className='horizontal-container'>
+                        <LifePortfolioTotalSum title={"Сумма портфеля"} text={"Сумма портфеля"} value={portfolioData.result.totalSum} eunit={"руб."} />
+                        <LifePortfolioYieldMetric title={"Неделя"} text={"Неделя"} yieldRub={portfolioData.result.moneyStatistics.weekYield} yieldPercent={portfolioData.result.moneyStatistics.weekYieldPercent} />
+                    </div>                              
                 </div>
+                <div>Состав</div>
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>                    
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>
