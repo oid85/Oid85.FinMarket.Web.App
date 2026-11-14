@@ -42,6 +42,9 @@ export const SevenEtfLifePortfolio = () => {
                 <div className='horizontal-container'>
                     <div className='life-portfolio-total-sum'>{`Сумма портфеля: ${formatNumber(portfolioData.result.totalSum)} руб.`}</div>
                 </div>
+                <div className='horizontal-container'>                    
+                    <div className='life-portfolio-money'>{`Ден. средства: ${formatNumber(portfolioData.result.money)} руб.`}</div>
+                </div>                
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
                     <div className='life-portfolio-border-style' style={{width: 26}}></div>

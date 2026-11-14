@@ -36,6 +36,9 @@ export const BondLifePortfolio = () => {
                 <div className='horizontal-container'>
                     <div className='life-portfolio-total-sum'>{`Сумма портфеля: ${formatNumber(portfolioData.result.totalSum)} руб.`}</div>
                 </div>
+                <div className='horizontal-container'>                    
+                    <div className='life-portfolio-money'>{`Ден. средства: ${formatNumber(portfolioData.result.money)} руб.`}</div>
+                </div>   
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
                     <div className='life-portfolio-border-style life-portfolio-ticker'>Тикер</div>
