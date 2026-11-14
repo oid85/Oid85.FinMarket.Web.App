@@ -76,6 +76,21 @@ export const SevenEtfLifePortfolio = () => {
                         </div>
                     ))
                 }
+                <div>Классы активов</div>
+                <div className='horizontal-container'>
+                    <div className='life-portfolio-border-style life-portfolio-number'>№</div>
+                    <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>                                      
+                    <div className='life-portfolio-border-style life-portfolio-percent'>Доля (расч.), %</div>
+                </div>
+                {
+                    portfolioData.result.classActiveItems.map((classActiveItem) => (
+                        <div className='horizontal-container'>
+                            <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: classActiveItem.colorFill}}>{classActiveItem.number}</div>
+                            <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: classActiveItem.colorFill}}>{classActiveItem.name}</div>                                                          
+                            <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: classActiveItem.colorFill}}>{`${formatNumber(classActiveItem.percent)} %`}</div>                              
+                        </div>
+                    ))
+                }                
             </div>
         }
         </React.Fragment>                

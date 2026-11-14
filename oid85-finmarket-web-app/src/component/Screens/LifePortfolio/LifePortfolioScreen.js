@@ -21,7 +21,7 @@ export const LifePortfolioScreen = () => {
                 <Tab title='Суперпортфель'>Суперпортфель</Tab>
                 <Tab title='Облигации'>Облигации</Tab>
                 <Tab title='Акции'>Акции</Tab>                
-                <Tab title='7 ETF'>7 ETF</Tab>
+                <Tab title='Корзина ETF'>Корзина ETF</Tab>
                 <Tab title='3 ETF'>3 ETF</Tab>
                 </TabList>
                 <TabPanel>
