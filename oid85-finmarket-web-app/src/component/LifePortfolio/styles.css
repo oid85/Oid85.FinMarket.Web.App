@@ -122,7 +122,7 @@
 
 .life-portfolio-metric {     
     padding: 1px; 
-    width: 115px;
+    width: 250px;
 }
 
 .life-portfolio-metric-description {     
@@ -144,6 +144,10 @@
 
 .life-portfolio-total-sum-value {     
     font-size: 28px; 
+}
+
+.life-portfolio-diagram {     
+    padding: 1px; 
 }
 
 /*Edit modal*/
