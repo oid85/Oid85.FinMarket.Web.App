@@ -11,6 +11,9 @@ import {Ticker} from '../Ticker/Ticker'
 import 'bootstrap/dist/css/bootstrap.css'
 import './styles.css'
 import { CONSTANTS } from '../../constants'
+import { LifePortfolioTotalSum } from './LifePortfolioTotalSum'
+import { LifePortfolioYieldMetric } from './LifePortfolioYieldMetric'
+import { LifePortfolioEquityDiagram } from './LifePortfolioEquityDiagram'
 
 export const SevenEtfLifePortfolio = () => {
     
@@ -39,12 +42,23 @@ export const SevenEtfLifePortfolio = () => {
             ? <Loader/>
             :
             <div className='life-portfolio-container'>
-                <div className='horizontal-container'>
-                    <div className='life-portfolio-total-sum'>{`Сумма портфеля: ${formatNumber(portfolioData.result.totalSum)} руб.`}</div>
+                <div>Статистика по доходности</div>
+                <div>
+                    <div className='horizontal-container'>
+                        <LifePortfolioTotalSum title={"Сумма портфеля"} text={"Сумма портфеля"} value={portfolioData.result.totalSum} eunit={"руб."} />
+                        <LifePortfolioYieldMetric title={"Год"} text={"Год"} yieldRub={portfolioData.result.moneyStatistics.yearYield} yieldPercent={portfolioData.result.moneyStatistics.yearYieldPercent} />
+                        <LifePortfolioYieldMetric title={"Месяц"} text={"Месяц"} yieldRub={portfolioData.result.moneyStatistics.quarterYield} yieldPercent={portfolioData.result.moneyStatistics.quarterYieldPercent} />
+                        <LifePortfolioYieldMetric title={"Квартал"} text={"Квартал"} yieldRub={portfolioData.result.moneyStatistics.monthYield} yieldPercent={portfolioData.result.moneyStatistics.monthYieldPercent} />
+                        <LifePortfolioYieldMetric title={"Неделя"} text={"Неделя"} yieldRub={portfolioData.result.moneyStatistics.weekYield} yieldPercent={portfolioData.result.moneyStatistics.weekYieldPercent} />
+                    </div>                              
                 </div>
-                <div className='horizontal-container'>                    
-                    <div className='life-portfolio-money'>{`Ден. средства: ${formatNumber(portfolioData.result.money)} руб.`}</div>
-                </div>                
+                <div>За последний квартал</div>
+                <div className='horizontal-container'>
+                    <div className='life-portfolio-container'>
+                        <LifePortfolioEquityDiagram series={portfolioData.result.moneyStatistics.equitySeries}/>
+                    </div>               
+                </div>                      
+                <div>Состав</div>             
                 <div className='horizontal-container'>
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
                     <div className='life-portfolio-border-style' style={{width: 26}}></div>
@@ -84,6 +98,7 @@ export const SevenEtfLifePortfolio = () => {
                     <div className='life-portfolio-border-style life-portfolio-number'>№</div>
                     <div className='life-portfolio-border-style life-portfolio-name'>Наименование</div>                                      
                     <div className='life-portfolio-border-style life-portfolio-percent'>Доля (расч.), %</div>
+                    <div className='life-portfolio-border-style life-portfolio-cost'>Стоимость (расч.), руб</div>
                 </div>
                 {
                     portfolioData.result.classActiveItems.map((classActiveItem) => (
@@ -91,6 +106,7 @@ export const SevenEtfLifePortfolio = () => {
                             <div className='life-portfolio-border-style life-portfolio-number' style={{backgroundColor: classActiveItem.colorFill}}>{classActiveItem.number}</div>
                             <div className='life-portfolio-border-style life-portfolio-name' style={{backgroundColor: classActiveItem.colorFill}}>{classActiveItem.name}</div>                                                          
                             <div className='life-portfolio-border-style life-portfolio-percent' style={{backgroundColor: classActiveItem.colorFill}}>{`${formatNumber(classActiveItem.percent)} %`}</div>                              
+                            <div className='life-portfolio-border-style life-portfolio-cost' style={{backgroundColor: classActiveItem.colorFill}}>{`${formatNumber(classActiveItem.cost)} руб`}</div>  
                         </div>
                     ))
                 }                
