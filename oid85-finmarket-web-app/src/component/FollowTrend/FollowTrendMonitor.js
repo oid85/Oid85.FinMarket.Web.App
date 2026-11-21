@@ -16,6 +16,7 @@ export const FollowTrendMonitor = () => {
     
     const strategyVersions = [
         'LifeFutureWeekUltimateSmoother',
+        'FutureWeekUltimateSmootherLongShortStrategy',
         'ShareWeekUltimateSmoother', 
         'EtfWeekUltimateSmoother'        
     ]
