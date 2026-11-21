@@ -15,21 +15,9 @@ import './styles.css'
 export const FollowTrendMonitor = () => {
     
     const strategyVersions = [
-        // 'ShareSupertrend',
-        // 'EtfSupertrend',
-        // 'FutureSupertrend',
-
-        'ShareUltimateSmoother', 
-        'EtfUltimateSmoother', 
-        'FutureUltimateSmoother', 
-
-        // 'ShareWeekSupertrend',
-        // 'EtfWeekSupertrend',
-        // 'FutureWeekSupertrend',
-
+        'LifeFutureWeekUltimateSmoother',
         'ShareWeekUltimateSmoother', 
-        'EtfWeekUltimateSmoother', 
-        'FutureWeekUltimateSmoother'
+        'EtfWeekUltimateSmoother'        
     ]
 
     const dispatch = useDispatch()
