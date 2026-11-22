@@ -15,7 +15,7 @@ import './styles.css'
 export const FollowTrendMonitor = () => {
     
     const strategyVersions = [
-        'LifeFutureWeekUltimateSmoother',
+        'FutureWeekUltimateSmoother',
         'FutureWeekUltimateSmootherLongShort',
         'ShareWeekUltimateSmoother', 
         'EtfWeekUltimateSmoother'        
@@ -60,9 +60,7 @@ export const FollowTrendMonitor = () => {
                 <div>
                     <div className='horizontal-container'>
                         <FollowTrendTotalSum title={"Сумма портфеля"} text={"Сумма портфеля"} value={followTrendMonitorData.result.totalSumLife} eunit={"руб."}/>
-                        <FollowTrendMetric title={"Годовая процентная доходность средняя"} text={"Дох. ср."} value={followTrendMonitorData.result.yield} eunit={"%"}/>
-                        <FollowTrendMetric title={"Годовая процентная доходность за 2021 год"} text={"Дох. 2021"} value={followTrendMonitorData.result.yield2021} eunit={"%"}/>
-                        <FollowTrendMetric title={"Годовая процентная доходность за 2022 год"} text={"Дох. 2022"} value={followTrendMonitorData.result.yield2022} eunit={"%"}/>
+                        <FollowTrendMetric title={"Годовая процентная доходность средняя"} text={"Дох. ср."} value={followTrendMonitorData.result.yield} eunit={"%"}/>                                                
                         <FollowTrendMetric title={"Годовая процентная доходность за 2023 год"} text={"Дох. 2023"} value={followTrendMonitorData.result.yield2023} eunit={"%"}/>
                         <FollowTrendMetric title={"Годовая процентная доходность за 2024 год"} text={"Дох. 2024"} value={followTrendMonitorData.result.yield2024} eunit={"%"}/>
                         <FollowTrendMetric title={"Годовая процентная доходность за 2025 год"} text={"Дох. 2025"} value={followTrendMonitorData.result.yield2025} eunit={"%"}/>

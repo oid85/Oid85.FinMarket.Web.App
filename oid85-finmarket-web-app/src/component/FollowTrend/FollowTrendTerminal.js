@@ -18,7 +18,7 @@ import { FollowTrendTerminalTaskSyncStop } from './FollowTrendTerminalTaskSyncSt
 
 export const FollowTrendTerminal = () => {
     
-    const strategyVersions = ['LifeFutureWeekUltimateSmoother']
+    const strategyVersions = ['FutureWeekUltimateSmoother']
     const dispatch = useDispatch()
     const loading = useSelector(state => state.app.loading)
     const followTrendTerminalData = useSelector(state => state.followTrend.followTrendTerminalData)
