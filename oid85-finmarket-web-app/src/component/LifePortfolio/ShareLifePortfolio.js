@@ -47,8 +47,8 @@ export const ShareLifePortfolio = () => {
                     <div className='horizontal-container'>
                         <LifePortfolioTotalSum title={"Сумма портфеля"} text={"Сумма портфеля"} value={portfolioData.result.totalSum} eunit={"руб."} />
                         <LifePortfolioYieldMetric title={"Год"} text={"Год"} yieldRub={portfolioData.result.moneyStatistics.yearYield} yieldPercent={portfolioData.result.moneyStatistics.yearYieldPercent} />
-                        <LifePortfolioYieldMetric title={"Месяц"} text={"Месяц"} yieldRub={portfolioData.result.moneyStatistics.quarterYield} yieldPercent={portfolioData.result.moneyStatistics.quarterYieldPercent} />
                         <LifePortfolioYieldMetric title={"Квартал"} text={"Квартал"} yieldRub={portfolioData.result.moneyStatistics.monthYield} yieldPercent={portfolioData.result.moneyStatistics.monthYieldPercent} />
+                        <LifePortfolioYieldMetric title={"Месяц"} text={"Месяц"} yieldRub={portfolioData.result.moneyStatistics.quarterYield} yieldPercent={portfolioData.result.moneyStatistics.quarterYieldPercent} />                        
                         <LifePortfolioYieldMetric title={"Неделя"} text={"Неделя"} yieldRub={portfolioData.result.moneyStatistics.weekYield} yieldPercent={portfolioData.result.moneyStatistics.weekYieldPercent} />
                     </div>                              
                 </div>

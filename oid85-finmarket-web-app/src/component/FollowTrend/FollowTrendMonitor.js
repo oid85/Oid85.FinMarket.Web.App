@@ -15,8 +15,7 @@ import './styles.css'
 export const FollowTrendMonitor = () => {
     
     const strategyVersions = [
-        'FutureWeekUltimateSmoother',
-        'FutureWeekUltimateSmootherLongShort',
+        'FutureWeekUltimateSmoother',        
         'ShareWeekUltimateSmoother', 
         'EtfWeekUltimateSmoother'        
     ]
