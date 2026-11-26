@@ -49,11 +49,11 @@ export const FollowTrendMonitor = () => {
                 }                                                                                                                                                                                                                                                              
                 </div>
                 <div>
-                    {
-                        followTrendMonitorData.result.description.map((text) => (
-                            <div className='follow-trend-description'>{text}</div> 
-                        ))                        
-                    }
+                {
+                    followTrendMonitorData.result.description.map((text) => (
+                        <div className='follow-trend-description'>{text}</div> 
+                    ))                        
+                }
                 </div>
                 <div>Статистика по доходности</div>
                 <div>
@@ -74,19 +74,19 @@ export const FollowTrendMonitor = () => {
                 </div>
                 <div>Открытые позиции</div>
                 <div className='horizontal-container-wrap'>
-                    {
-                        followTrendMonitorData.result.currentPositions.map((position) => (
-                            <FollowTrendPosition position={position}/>     
-                        ))                        
-                    }
+                {
+                    followTrendMonitorData.result.currentPositions.map((position) => (
+                        <FollowTrendPosition position={position}/>     
+                    ))                        
+                }
                 </div>
                 <div>График цены за 30 периодов</div>
                 <div className='horizontal-container-wrap'>
-                    {
-                        followTrendMonitorData.result.priceWithEntryPriceSeries.map((seriesList) => (
-                            <FollowTrendPriceDiagram series={seriesList}/>
-                        ))                        
-                    }
+                {
+                    followTrendMonitorData.result.priceWithEntryPriceSeries.map((seriesList) => (
+                        <FollowTrendPriceDiagram series={seriesList}/>
+                    ))                        
+                }
                 </div>                
                 <div>За все время</div>
                 <div className='horizontal-container'>
@@ -105,31 +105,31 @@ export const FollowTrendMonitor = () => {
                 </div> 
                 <div>История позиций</div> 
                 <div>
-                    {
-                        followTrendMonitorData.result.positionWeightData.map((dataItem) => (
-                            <div className='horizontal-container'>                   
-                                <div className='follow-trend-weigth-data-ticker follow-trend-weigth-data-cell-border-style'>{dataItem.ticker}</div>
-                                <div className='horizontal-container'>
-                                {
-                                    dataItem.positionWeightItems.map((weightItem) => (
-                                        <div 
-                                            title={`${weightItem.date} ${dataItem.ticker} ${weightItem.weight}`}
-                                            className='follow-trend-weigth-data-cell follow-trend-weigth-data-cell-border-style' 
-                                            style={{backgroundColor: weightItem.colorFill}}></div>
-                                    ))
-                                }                      
-                                </div>
+                {
+                    followTrendMonitorData.result.positionWeightData.map((dataItem) => (
+                        <div className='horizontal-container'>                   
+                            <div className='follow-trend-weigth-data-ticker follow-trend-weigth-data-cell-border-style'>{dataItem.ticker}</div>
+                            <div className='horizontal-container'>
+                            {
+                                dataItem.positionWeightItems.map((weightItem) => (
+                                    <div 
+                                        title={`${weightItem.date} ${dataItem.ticker} ${weightItem.weight}`}
+                                        className='follow-trend-weigth-data-cell follow-trend-weigth-data-cell-border-style' 
+                                        style={{backgroundColor: weightItem.colorFill}}></div>
+                                ))
+                            }                      
                             </div>
-                        ))
-                    }
+                        </div>
+                    ))
+                }
                 </div>                              
                 <div>Сообщения</div>
                 <div>
-                    {
-                        followTrendMonitorData.result.messages.map((message) => (
-                            <FollowTrendMessage message={message}/>     
-                        ))                        
-                    }
+                {
+                    followTrendMonitorData.result.messages.map((message) => (
+                        <FollowTrendMessage message={message}/>     
+                    ))                        
+                }
                 </div>                                           
             </div>
         }
